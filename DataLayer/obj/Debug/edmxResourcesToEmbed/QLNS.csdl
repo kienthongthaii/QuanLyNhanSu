@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLNS_CELLPHONESModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLNS_CELLPHONES_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_BangCong" EntityType="QLNS_CELLPHONESModel.tb_BangCong" />
+    <EntitySet Name="tb_BaoHiem" EntityType="QLNS_CELLPHONESModel.tb_BaoHiem" />
+    <EntitySet Name="tb_BoPhan" EntityType="QLNS_CELLPHONESModel.tb_BoPhan" />
+    <EntitySet Name="tb_CongTy" EntityType="QLNS_CELLPHONESModel.tb_CongTy" />
+    <EntitySet Name="tb_ChucVu" EntityType="QLNS_CELLPHONESModel.tb_ChucVu" />
+    <EntitySet Name="tb_ChungChi" EntityType="QLNS_CELLPHONESModel.tb_ChungChi" />
+    <EntitySet Name="tb_DanToc" EntityType="QLNS_CELLPHONESModel.tb_DanToc" />
+    <EntitySet Name="tb_DieuChuyen" EntityType="QLNS_CELLPHONESModel.tb_DieuChuyen" />
+    <EntitySet Name="tb_HopDong" EntityType="QLNS_CELLPHONESModel.tb_HopDong" />
+    <EntitySet Name="tb_KhenThuongKyLuat" EntityType="QLNS_CELLPHONESModel.tb_KhenThuongKyLuat" />
+    <EntitySet Name="tb_NhanVien" EntityType="QLNS_CELLPHONESModel.tb_NhanVien" />
+    <EntitySet Name="tb_NhanVien_PhuCap" EntityType="QLNS_CELLPHONESModel.tb_NhanVien_PhuCap" />
+    <EntitySet Name="tb_PhongBan" EntityType="QLNS_CELLPHONESModel.tb_PhongBan" />
+    <EntitySet Name="tb_PhuCap" EntityType="QLNS_CELLPHONESModel.tb_PhuCap" />
+    <EntitySet Name="tb_TangCa" EntityType="QLNS_CELLPHONESModel.tb_TangCa" />
+    <EntitySet Name="tb_TonGiao" EntityType="QLNS_CELLPHONESModel.tb_TonGiao" />
+    <EntitySet Name="tb_ThangTien" EntityType="QLNS_CELLPHONESModel.tb_ThangTien" />
+    <EntitySet Name="tb_ThoiViec" EntityType="QLNS_CELLPHONESModel.tb_ThoiViec" />
+    <EntitySet Name="tb_TrinhDo" EntityType="QLNS_CELLPHONESModel.tb_TrinhDo" />
+    <EntitySet Name="tb_UngLuong" EntityType="QLNS_CELLPHONESModel.tb_UngLuong" />
+    <AssociationSet Name="FK_tb_BangCong_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_BangCong" EntitySet="tb_BangCong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BaoHiem_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_BaoHiem_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_BaoHiem" EntitySet="tb_BaoHiem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_BoPhan" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_BoPhan">
+      <End Role="tb_BoPhan" EntitySet="tb_BoPhan" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_CongTy" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_CongTy">
+      <End Role="tb_CongTy" EntitySet="tb_CongTy" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_ChucVu" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_ChucVu">
+      <End Role="tb_ChucVu" EntitySet="tb_ChucVu" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_ChungChi_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_ChungChi_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_ChungChi" EntitySet="tb_ChungChi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_DanToc" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_DanToc">
+      <End Role="tb_DanToc" EntitySet="tb_DanToc" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_DieuChuyen_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_DieuChuyen_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_DieuChuyen" EntitySet="tb_DieuChuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_DieuChinhLuong_tb_HopDong" Association="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_HopDong">
+      <End Role="tb_HopDong" EntitySet="tb_HopDong" />
+      <End Role="tb_ThangTien" EntitySet="tb_ThangTien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_HopDong_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_HopDong_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_HopDong" EntitySet="tb_HopDong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_KhenThuongKyLuat_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_KhenThuongKyLuat_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_KhenThuongKyLuat" EntitySet="tb_KhenThuongKyLuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_DieuChinhLuong_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_ThangTien" EntitySet="tb_ThangTien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_PhuCap_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_NhanVien_PhuCap" EntitySet="tb_NhanVien_PhuCap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_PhongBan" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_PhongBan">
+      <End Role="tb_PhongBan" EntitySet="tb_PhongBan" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_TonGiao" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TonGiao">
+      <End Role="tb_TonGiao" EntitySet="tb_TonGiao" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_tb_TrinhDo" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TrinhDo">
+      <End Role="tb_TrinhDo" EntitySet="tb_TrinhDo" />
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_TangCa_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_TangCa" EntitySet="tb_TangCa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_ThoiViec_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_ThoiViec_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_ThoiViec" EntitySet="tb_ThoiViec" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_UngLuong_tb_NhanVien" Association="QLNS_CELLPHONESModel.FK_tb_UngLuong_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_UngLuong" EntitySet="tb_UngLuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_NhanVien_PhuCap_tb_PhuCap" Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_PhuCap">
+      <End Role="tb_PhuCap" EntitySet="tb_PhuCap" />
+      <End Role="tb_NhanVien_PhuCap" EntitySet="tb_NhanVien_PhuCap" />
+    </AssociationSet>
+    <EntitySet Name="tb_LoaiCa" EntityType="QLNS_CELLPHONESModel.tb_LoaiCa" />
+    <AssociationSet Name="FK_tb_TangCa_tb_LoaiTangCa" Association="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_LoaiTangCa">
+      <End Role="tb_LoaiCa" EntitySet="tb_LoaiCa" />
+      <End Role="tb_TangCa" EntitySet="tb_TangCa" />
+    </AssociationSet>
+    <EntitySet Name="tb_LoaiCong" EntityType="QLNS_CELLPHONESModel.tb_LoaiCong" />
+    <AssociationSet Name="FK_tb_BangCong_tb_LoaiCong" Association="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_LoaiCong">
+      <End Role="tb_LoaiCong" EntitySet="tb_LoaiCong" />
+      <End Role="tb_BangCong" EntitySet="tb_BangCong" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tb_BangCong">
+    <Key>
+      <PropertyRef Name="ID_BC" />
+    </Key>
+    <Property Name="ID_BC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nam" Type="Int32" Nullable="false" />
+    <Property Name="Thang" Type="Int32" Nullable="false" />
+    <Property Name="Ngay" Type="Int32" Nullable="false" />
+    <Property Name="GioVao" Type="Int32" Nullable="false" />
+    <Property Name="PhutVao" Type="Int32" Nullable="false" />
+    <Property Name="GiayVao" Type="Int32" />
+    <Property Name="GioRa" Type="Int32" Nullable="false" />
+    <Property Name="PhutRa" Type="Int32" Nullable="false" />
+    <Property Name="GiayRa" Type="Int32" />
+    <Property Name="ID_NV" Type="Int32" Nullable="false" />
+    <Property Name="ID_LoaiCong" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_NhanVien" FromRole="tb_BangCong" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_LoaiCong" Relationship="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_LoaiCong" FromRole="tb_BangCong" ToRole="tb_LoaiCong" />
+  </EntityType>
+  <EntityType Name="tb_BaoHiem">
+    <Key>
+      <PropertyRef Name="ID_BH" />
+    </Key>
+    <Property Name="ID_BH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SoBH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NoiCap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoiKhamBenh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NV" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_BaoHiem_tb_NhanVien" FromRole="tb_BaoHiem" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_BoPhan">
+    <Key>
+      <PropertyRef Name="ID_BP" />
+    </Key>
+    <Property Name="ID_BP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenBP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_PB" Type="Int32" />
+    <Property Name="ID_TruongBP" Type="Int32" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_BoPhan" FromRole="tb_BoPhan" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_CongTy">
+    <Key>
+      <PropertyRef Name="ID_CT" />
+    </Key>
+    <Property Name="ID_CT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenCT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_CongTy" FromRole="tb_CongTy" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_ChucVu">
+    <Key>
+      <PropertyRef Name="ID_CV" />
+    </Key>
+    <Property Name="ID_CV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenCV" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_ChucVu" FromRole="tb_ChucVu" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_ChungChi">
+    <Key>
+      <PropertyRef Name="ID_CC" />
+    </Key>
+    <Property Name="ID_CC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Loai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Diem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonViCap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCap" Type="DateTime" Precision="3" />
+    <Property Name="ThoiHan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ConHan" Type="Boolean" />
+    <Property Name="ID_NV" Type="Int32" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_ChungChi_tb_NhanVien" FromRole="tb_ChungChi" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_DanToc">
+    <Key>
+      <PropertyRef Name="ID_DT" />
+    </Key>
+    <Property Name="ID_DT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_DanToc" FromRole="tb_DanToc" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_DieuChuyen">
+    <Key>
+      <PropertyRef Name="SoQD" />
+    </Key>
+    <Property Name="SoQD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay" Type="DateTime" Precision="3" />
+    <Property Name="ID_NV" Type="Int32" />
+    <Property Name="ID_PB" Type="Int32" />
+    <Property Name="ID_BP" Type="Int32" />
+    <Property Name="ID_PBNew" Type="Int32" />
+    <Property Name="ID_BPNew" Type="Int32" />
+    <Property Name="LiDo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_DieuChuyen_tb_NhanVien" FromRole="tb_DieuChuyen" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_HopDong">
+    <Key>
+      <PropertyRef Name="SoHD" />
+    </Key>
+    <Property Name="SoHD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKy" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LanKy" Type="Int32" Nullable="false" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiHan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LuongThoaThuan" Type="Double" Nullable="false" />
+    <Property Name="ID_NV" Type="Int32" />
+    <Property Name="ID_CT" Type="Int32" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_ThangTien" Relationship="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_HopDong" FromRole="tb_HopDong" ToRole="tb_ThangTien" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_HopDong_tb_NhanVien" FromRole="tb_HopDong" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_KhenThuongKyLuat">
+    <Key>
+      <PropertyRef Name="SoQuyetDinh" />
+    </Key>
+    <Property Name="SoQuyetDinh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LyDo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay" Type="DateTime" Precision="3" />
+    <Property Name="Loai" Type="Int32" />
+    <Property Name="ID_NV" Type="Int32" />
+    <Property Name="TuNgay" Type="DateTime" Precision="3" />
+    <Property Name="DenNgay" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_KhenThuongKyLuat_tb_NhanVien" FromRole="tb_KhenThuongKyLuat" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_NhanVien">
+    <Key>
+      <PropertyRef Name="ID_NV" />
+    </Key>
+    <Property Name="ID_NV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayLam" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CCCD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Anh" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ID_PB" Type="Int32" Nullable="false" />
+    <Property Name="ID_CV" Type="Int32" Nullable="false" />
+    <Property Name="ID_BP" Type="Int32" Nullable="false" />
+    <Property Name="ID_TD" Type="Int32" Nullable="false" />
+    <Property Name="ID_DT" Type="Int32" Nullable="false" />
+    <Property Name="ID_TG" Type="Int32" Nullable="false" />
+    <Property Name="ID_CT" Type="Int32" Nullable="false" />
+    <Property Name="DaThoiViec" Type="Boolean" />
+    <NavigationProperty Name="tb_BangCong" Relationship="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_BangCong" />
+    <NavigationProperty Name="tb_BaoHiem" Relationship="QLNS_CELLPHONESModel.FK_tb_BaoHiem_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_BaoHiem" />
+    <NavigationProperty Name="tb_BoPhan" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_BoPhan" FromRole="tb_NhanVien" ToRole="tb_BoPhan" />
+    <NavigationProperty Name="tb_CongTy" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_CongTy" FromRole="tb_NhanVien" ToRole="tb_CongTy" />
+    <NavigationProperty Name="tb_ChucVu" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_ChucVu" FromRole="tb_NhanVien" ToRole="tb_ChucVu" />
+    <NavigationProperty Name="tb_ChungChi" Relationship="QLNS_CELLPHONESModel.FK_tb_ChungChi_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_ChungChi" />
+    <NavigationProperty Name="tb_DanToc" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_DanToc" FromRole="tb_NhanVien" ToRole="tb_DanToc" />
+    <NavigationProperty Name="tb_DieuChuyen" Relationship="QLNS_CELLPHONESModel.FK_tb_DieuChuyen_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_DieuChuyen" />
+    <NavigationProperty Name="tb_HopDong" Relationship="QLNS_CELLPHONESModel.FK_tb_HopDong_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_HopDong" />
+    <NavigationProperty Name="tb_KhenThuongKyLuat" Relationship="QLNS_CELLPHONESModel.FK_tb_KhenThuongKyLuat_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_KhenThuongKyLuat" />
+    <NavigationProperty Name="tb_ThangTien" Relationship="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_ThangTien" />
+    <NavigationProperty Name="tb_NhanVien_PhuCap" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_NhanVien_PhuCap" />
+    <NavigationProperty Name="tb_PhongBan" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_PhongBan" FromRole="tb_NhanVien" ToRole="tb_PhongBan" />
+    <NavigationProperty Name="tb_TonGiao" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TonGiao" FromRole="tb_NhanVien" ToRole="tb_TonGiao" />
+    <NavigationProperty Name="tb_TrinhDo" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TrinhDo" FromRole="tb_NhanVien" ToRole="tb_TrinhDo" />
+    <NavigationProperty Name="tb_TangCa" Relationship="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_TangCa" />
+    <NavigationProperty Name="tb_ThoiViec" Relationship="QLNS_CELLPHONESModel.FK_tb_ThoiViec_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_ThoiViec" />
+    <NavigationProperty Name="tb_UngLuong" Relationship="QLNS_CELLPHONESModel.FK_tb_UngLuong_tb_NhanVien" FromRole="tb_NhanVien" ToRole="tb_UngLuong" />
+  </EntityType>
+  <EntityType Name="tb_NhanVien_PhuCap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_NV" Type="Int32" Nullable="false" />
+    <Property Name="ID_PC" Type="Int32" Nullable="false" />
+    <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoTien" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_NhanVien" FromRole="tb_NhanVien_PhuCap" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_PhuCap" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_PhuCap" FromRole="tb_NhanVien_PhuCap" ToRole="tb_PhuCap" />
+  </EntityType>
+  <EntityType Name="tb_PhongBan">
+    <Key>
+      <PropertyRef Name="ID_PB" />
+    </Key>
+    <Property Name="ID_PB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_TruongPB" Type="Int32" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_PhongBan" FromRole="tb_PhongBan" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_PhuCap">
+    <Key>
+      <PropertyRef Name="ID_PC" />
+    </Key>
+    <Property Name="ID_PC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoTien" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien_PhuCap" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_PhuCap" FromRole="tb_PhuCap" ToRole="tb_NhanVien_PhuCap" />
+  </EntityType>
+  <EntityType Name="tb_TangCa">
+    <Key>
+      <PropertyRef Name="ID_TC" />
+    </Key>
+    <Property Name="ID_TC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nam" Type="Int32" Nullable="false" />
+    <Property Name="Thang" Type="Int32" Nullable="false" />
+    <Property Name="Ngay" Type="Int32" Nullable="false" />
+    <Property Name="SoGio" Type="Double" Nullable="false" />
+    <Property Name="ID_NV" Type="Int32" Nullable="false" />
+    <Property Name="ID_LTC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_NhanVien" FromRole="tb_TangCa" ToRole="tb_NhanVien" />
+    <NavigationProperty Name="tb_LoaiCa" Relationship="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_LoaiTangCa" FromRole="tb_TangCa" ToRole="tb_LoaiCa" />
+  </EntityType>
+  <EntityType Name="tb_TonGiao">
+    <Key>
+      <PropertyRef Name="ID_TG" />
+    </Key>
+    <Property Name="ID_TG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTG" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TonGiao" FromRole="tb_TonGiao" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_ThangTien">
+    <Key>
+      <PropertyRef Name="SoQD" />
+    </Key>
+    <Property Name="SoQD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoHD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_NV" Type="Int32" />
+    <Property Name="LuongThoaThuan_OLD" Type="Double" />
+    <Property Name="LuongThoaThuan_NEW" Type="Double" />
+    <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LyDo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NgayApDung" Type="DateTime" Precision="3" />
+    <Property Name="NgayKy" Type="DateTime" Precision="3" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <Property Name="ID_CV_Old" Type="Int32" />
+    <Property Name="ID_CV_New" Type="Int32" />
+    <NavigationProperty Name="tb_HopDong" Relationship="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_HopDong" FromRole="tb_ThangTien" ToRole="tb_HopDong" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_NhanVien" FromRole="tb_ThangTien" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_ThoiViec">
+    <Key>
+      <PropertyRef Name="SoQD" />
+    </Key>
+    <Property Name="SoQD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayNopDon" Type="DateTime" Precision="3" />
+    <Property Name="NgayThoiViec" Type="DateTime" Precision="3" />
+    <Property Name="LyDo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <Property Name="ID_NV" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_ThoiViec_tb_NhanVien" FromRole="tb_ThoiViec" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_TrinhDo">
+    <Key>
+      <PropertyRef Name="ID_TD" />
+    </Key>
+    <Property Name="ID_TD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonViCap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCap" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TrinhDo" FromRole="tb_TrinhDo" ToRole="tb_NhanVien" />
+  </EntityType>
+  <EntityType Name="tb_UngLuong">
+    <Key>
+      <PropertyRef Name="ID_UL" />
+    </Key>
+    <Property Name="ID_UL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nam" Type="Int32" Nullable="false" />
+    <Property Name="Thang" Type="Int32" Nullable="false" />
+    <Property Name="Ngay" Type="Int32" Nullable="false" />
+    <Property Name="SoTien" Type="Double" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="ID_NV" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_NhanVien" Relationship="QLNS_CELLPHONESModel.FK_tb_UngLuong_tb_NhanVien" FromRole="tb_UngLuong" ToRole="tb_NhanVien" />
+  </EntityType>
+  <Association Name="FK_tb_BangCong_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_BangCong" Role="tb_BangCong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_BangCong">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_BaoHiem_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_BaoHiem" Role="tb_BaoHiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_BaoHiem">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_BoPhan">
+    <End Type="QLNS_CELLPHONESModel.tb_BoPhan" Role="tb_BoPhan" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_BoPhan">
+        <PropertyRef Name="ID_BP" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_BP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_CongTy">
+    <End Type="QLNS_CELLPHONESModel.tb_CongTy" Role="tb_CongTy" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_CongTy">
+        <PropertyRef Name="ID_CT" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_CT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_ChucVu">
+    <End Type="QLNS_CELLPHONESModel.tb_ChucVu" Role="tb_ChucVu" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_ChucVu">
+        <PropertyRef Name="ID_CV" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_CV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_ChungChi_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QLNS_CELLPHONESModel.tb_ChungChi" Role="tb_ChungChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_ChungChi">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_DanToc">
+    <End Type="QLNS_CELLPHONESModel.tb_DanToc" Role="tb_DanToc" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_DanToc">
+        <PropertyRef Name="ID_DT" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_DT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_DieuChuyen_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QLNS_CELLPHONESModel.tb_DieuChuyen" Role="tb_DieuChuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_DieuChuyen">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_DieuChinhLuong_tb_HopDong">
+    <End Type="QLNS_CELLPHONESModel.tb_HopDong" Role="tb_HopDong" Multiplicity="0..1" />
+    <End Type="QLNS_CELLPHONESModel.tb_ThangTien" Role="tb_ThangTien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HopDong">
+        <PropertyRef Name="SoHD" />
+      </Principal>
+      <Dependent Role="tb_ThangTien">
+        <PropertyRef Name="SoHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_HopDong_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QLNS_CELLPHONESModel.tb_HopDong" Role="tb_HopDong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_HopDong">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_KhenThuongKyLuat_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QLNS_CELLPHONESModel.tb_KhenThuongKyLuat" Role="tb_KhenThuongKyLuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_KhenThuongKyLuat">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_DieuChinhLuong_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="0..1" />
+    <End Type="QLNS_CELLPHONESModel.tb_ThangTien" Role="tb_ThangTien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_ThangTien">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_PhuCap_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien_PhuCap" Role="tb_NhanVien_PhuCap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_NhanVien_PhuCap">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_PhongBan">
+    <End Type="QLNS_CELLPHONESModel.tb_PhongBan" Role="tb_PhongBan" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_PhongBan">
+        <PropertyRef Name="ID_PB" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_PB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_TonGiao">
+    <End Type="QLNS_CELLPHONESModel.tb_TonGiao" Role="tb_TonGiao" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TonGiao">
+        <PropertyRef Name="ID_TG" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_TG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_tb_TrinhDo">
+    <End Type="QLNS_CELLPHONESModel.tb_TrinhDo" Role="tb_TrinhDo" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TrinhDo">
+        <PropertyRef Name="ID_TD" />
+      </Principal>
+      <Dependent Role="tb_NhanVien">
+        <PropertyRef Name="ID_TD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_TangCa_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_TangCa" Role="tb_TangCa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_TangCa">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_ThoiViec_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_ThoiViec" Role="tb_ThoiViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_ThoiViec">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_UngLuong_tb_NhanVien">
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien" Role="tb_NhanVien" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_UngLuong" Role="tb_UngLuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_UngLuong">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_NhanVien_PhuCap_tb_PhuCap">
+    <End Type="QLNS_CELLPHONESModel.tb_PhuCap" Role="tb_PhuCap" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_NhanVien_PhuCap" Role="tb_NhanVien_PhuCap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_PhuCap">
+        <PropertyRef Name="ID_PC" />
+      </Principal>
+      <Dependent Role="tb_NhanVien_PhuCap">
+        <PropertyRef Name="ID_PC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_LoaiCa">
+    <Key>
+      <PropertyRef Name="ID_LCa" />
+    </Key>
+    <Property Name="ID_LCa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiCa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HeSo" Type="Double" Nullable="false" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_TangCa" Relationship="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_LoaiTangCa" FromRole="tb_LoaiCa" ToRole="tb_TangCa" />
+  </EntityType>
+  <Association Name="FK_tb_TangCa_tb_LoaiTangCa">
+    <End Type="QLNS_CELLPHONESModel.tb_LoaiCa" Role="tb_LoaiCa" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_TangCa" Role="tb_TangCa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_LoaiCa">
+        <PropertyRef Name="ID_LCa" />
+      </Principal>
+      <Dependent Role="tb_TangCa">
+        <PropertyRef Name="ID_LTC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tb_LoaiCong">
+    <Key>
+      <PropertyRef Name="ID_LCo" />
+    </Key>
+    <Property Name="ID_LCo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiCong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HeSo" Type="Double" Nullable="false" />
+    <Property Name="Create_By" Type="Int32" />
+    <Property Name="Create_Time" Type="DateTime" Precision="3" />
+    <Property Name="Update_By" Type="Int32" />
+    <Property Name="Update_Time" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="Int32" />
+    <Property Name="Delete_Time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_BangCong" Relationship="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_LoaiCong" FromRole="tb_LoaiCong" ToRole="tb_BangCong" />
+  </EntityType>
+  <Association Name="FK_tb_BangCong_tb_LoaiCong">
+    <End Type="QLNS_CELLPHONESModel.tb_LoaiCong" Role="tb_LoaiCong" Multiplicity="1" />
+    <End Type="QLNS_CELLPHONESModel.tb_BangCong" Role="tb_BangCong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_LoaiCong">
+        <PropertyRef Name="ID_LCo" />
+      </Principal>
+      <Dependent Role="tb_BangCong">
+        <PropertyRef Name="ID_LoaiCong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD4C0F2D-3469-44DD-BE1C-FE997A956939}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLayer</RootNamespace>
+    <AssemblyName>BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NHANSU_BL\BoPhan.cs" />
+    <Compile Include="CHAMCONG_BL\LoaiCa.cs" />
+    <Compile Include="CHAMCONG_BL\LoaiCong.cs" />
+    <Compile Include="NHANSU_BL\ChucVu.cs" />
+    <Compile Include="NHANSU_BL\CongTy.cs" />
+    <Compile Include="NHANSU_BL\DanToc.cs" />
+    <Compile Include="NHANSU_BL\ThangTien.cs" />
+    <Compile Include="DTO\BoPhan_DTO.cs" />
+    <Compile Include="DTO\ThangTien_DTO.cs" />
+    <Compile Include="DTO\DieuChuyen_DTO.cs" />
+    <Compile Include="DTO\ThoiViec_DTO.cs" />
+    <Compile Include="DTO\HopDong_DTO.cs" />
+    <Compile Include="DTO\KhenThuongKyLuat_DTO.cs" />
+    <Compile Include="DTO\NhanVien_DTO.cs" />
+    <Compile Include="DTO\PhongBan_DTO.cs" />
+    <Compile Include="NHANSU_BL\HopDongLaoDong.cs" />
+    <Compile Include="NHANSU_BL\KhenThuong_KyLuat.cs" />
+    <Compile Include="NHANSU_BL\NhanVien.cs" />
+    <Compile Include="NHANSU_BL\NhanVienDieuChuyen.cs" />
+    <Compile Include="NHANSU_BL\PhongBan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NHANSU_BL\ThoiViec.cs" />
+    <Compile Include="NHANSU_BL\TonGiao.cs" />
+    <Compile Include="NHANSU_BL\TrinhDo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{b0f4e30d-3ef4-4680-a331-5a1bfdd11847}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

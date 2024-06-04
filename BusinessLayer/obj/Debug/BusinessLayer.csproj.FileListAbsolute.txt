@@ -1,0 +1,15 @@
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\DataLayer.dll
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\DataLayer.dll.config
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Code_UFM\QLNS_CellPhoneS\BusinessLayer\obj\Debug\BusinessLayer.pdb

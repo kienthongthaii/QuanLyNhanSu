@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9ae3dbb2ab864fada3582c0d749c32f7" Name="Diagram1" ZoomLevel="69">
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_BangCong" Width="1.5" PointX="8.25" PointY="21" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_BaoHiem" Width="1.5" PointX="5.25" PointY="16.5" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_BoPhan" Width="1.5" PointX="0.75" PointY="21.875" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_CongTy" Width="1.5" PointX="0.75" PointY="24.625" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_ChucVu" Width="1.5" PointX="0.75" PointY="15.625" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_ChungChi" Width="1.5" PointX="5.25" PointY="19.625" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_DanToc" Width="1.5" PointX="0.75" PointY="27.625" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_DieuChuyen" Width="1.5" PointX="5.25" PointY="44.25" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_HopDong" Width="1.5" PointX="5.25" PointY="31.5" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_KhenThuongKyLuat" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_NhanVien" Width="1.5" PointX="3" PointY="18.875" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_NhanVien_PhuCap" Width="1.5" PointX="5.25" PointY="23.5" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_PhongBan" Width="1.5" PointX="0.75" PointY="30" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_PhuCap" Width="1.5" PointX="3" PointY="28" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_TangCa" Width="1.5" PointX="8.25" PointY="17.5" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_TonGiao" Width="1.5" PointX="0.75" PointY="32.5" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_ThangTien" Width="1.5" PointX="7.5" PointY="26.125" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_ThoiViec" Width="1.5" PointX="5.25" PointY="40" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_TrinhDo" Width="1.5" PointX="0.75" PointY="18" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_UngLuong" Width="1.5" PointX="5.25" PointY="36.75" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_BaoHiem_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_BoPhan" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_CongTy" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_ChucVu" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_ChungChi_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_DanToc" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_DieuChuyen_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_HopDong" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_HopDong_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_KhenThuongKyLuat_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_DieuChinhLuong_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_PhongBan" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TonGiao" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_tb_TrinhDo" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_ThoiViec_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_UngLuong_tb_NhanVien" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_NhanVien_PhuCap_tb_PhuCap" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_LoaiCa" Width="1.5" PointX="3.375" PointY="1" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_TangCa_tb_LoaiTangCa" />
+        <EntityTypeShape EntityType="QLNS_CELLPHONESModel.tb_LoaiCong" Width="1.5" PointX="0.75" PointY="1" />
+        <AssociationConnector Association="QLNS_CELLPHONESModel.FK_tb_BangCong_tb_LoaiCong" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
