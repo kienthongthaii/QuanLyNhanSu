@@ -70,7 +70,7 @@ namespace QLNhanSu
                 tv.NgayThoiViec = dtNgayThoiViec.Value;
                 tv.LyDo = txtLiDo.Text;
                 tv.GhiChu = txtGhiChu.Text;
-                tv.ID_NV = int.Parse(slkNhanVien.EditValue.ToString()); 
+                tv.ID_NV = slkNhanVien.EditValue.ToString(); 
                 tv.Create_By = 1;
                 tv.Create_Time = DateTime.Now;
                 _thoiViec.Add(tv);
@@ -82,7 +82,7 @@ namespace QLNhanSu
                 tv.NgayThoiViec = dtNgayThoiViec.Value;
                 tv.LyDo = txtLiDo.Text;
                 tv.GhiChu = txtGhiChu.Text;
-                tv.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
+                tv.ID_NV = slkNhanVien.EditValue.ToString();
                 tv.Update_By = 1;
                 tv.Update_Time = DateTime.Now;
                 _thoiViec.Update(tv);
@@ -184,8 +184,8 @@ namespace QLNhanSu
                 _soQD = gvDanhSach.GetFocusedRowCellValue("SoQD").ToString();
                 var tv = _thoiViec.getItem(_soQD);
                 txtSoQD.Text = _soQD;
-                dtNgayNopDon.Value = tv.NgayNopDon.Value;
-                dtNgayThoiViec.Value = tv.NgayThoiViec.Value;
+                dtNgayNopDon.Value = tv.NgayNopDon;
+                dtNgayThoiViec.Value = tv.NgayThoiViec;
                 slkNhanVien.EditValue = tv.ID_NV;
                 txtGhiChu.Text = tv.GhiChu;
                 txtLiDo.Text = tv.LyDo;

@@ -1,93 +1,154 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QLNS_CELLPHONESModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="tb_BangCong">
+<Schema Namespace="QuanLyNhanSu_MasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_BangCong_NV_CT">
     <Key>
-      <PropertyRef Name="ID_BC" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID_BC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nam" Type="int" Nullable="false" />
-    <Property Name="Thang" Type="int" Nullable="false" />
-    <Property Name="Ngay" Type="int" Nullable="false" />
-    <Property Name="GioVao" Type="int" Nullable="false" />
-    <Property Name="PhutVao" Type="int" Nullable="false" />
-    <Property Name="GiayVao" Type="int" />
-    <Property Name="GioRa" Type="int" Nullable="false" />
-    <Property Name="PhutRa" Type="int" Nullable="false" />
-    <Property Name="GiayRa" Type="int" />
-    <Property Name="ID_NV" Type="int" Nullable="false" />
-    <Property Name="ID_LoaiCong" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKyCong" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ngay" Type="date" Nullable="false" />
+    <Property Name="Thu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GioVao" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GioRa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayThuong" Type="float" />
+    <Property Name="NgayPhep" Type="float" />
+    <Property Name="NgayKhongPhep" Type="float" />
+    <Property Name="NgayLe" Type="float" />
+    <Property Name="NgayChuNhat" Type="float" />
+    <Property Name="KyHieu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_BangLuong">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKyCong" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nvarchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LuongNgayThuong" Type="money" Nullable="false" />
+    <Property Name="LuongNgayPhep" Type="money" Nullable="false" />
+    <Property Name="LuongNgayKhongPhep" Type="money" Nullable="false" />
+    <Property Name="LuongNgayLe" Type="money" Nullable="false" />
+    <Property Name="LuongNgayChuNhat" Type="money" Nullable="false" />
+    <Property Name="TangCa" Type="money" Nullable="false" />
+    <Property Name="PhuCap" Type="money" Nullable="false" />
+    <Property Name="BaoHiem" Type="money" Nullable="false" />
+    <Property Name="Thue" Type="money" Nullable="false" />
+    <Property Name="UngLuong" Type="money" Nullable="false" />
+    <Property Name="ThucLanh" Type="money" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_BaoHiem">
     <Key>
       <PropertyRef Name="ID_BH" />
     </Key>
-    <Property Name="ID_BH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_BH" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="SoBH" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="NgayCap" Type="datetime" Nullable="false" />
-    <Property Name="NoiCap" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="NoiKhamBenh" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="ID_NV" Type="int" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayCap" Type="date" Nullable="false" />
+    <Property Name="NoiCap" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NoiKhamBenh" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_BoPhan">
     <Key>
       <PropertyRef Name="ID_BP" />
     </Key>
-    <Property Name="ID_BP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_BP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_PB" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenBP" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="ID_PB" Type="int" />
-    <Property Name="ID_TruongBP" Type="int" />
-  </EntityType>
-  <EntityType Name="tb_CongTy">
-    <Key>
-      <PropertyRef Name="ID_CT" />
-    </Key>
-    <Property Name="ID_CT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenCT" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DienThoai" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="ID_TruongBP" Type="varchar" MaxLength="50" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_ChucVu">
     <Key>
       <PropertyRef Name="ID_CV" />
     </Key>
-    <Property Name="ID_CV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CV" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenCV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_ChungChi">
     <Key>
       <PropertyRef Name="ID_CC" />
     </Key>
-    <Property Name="ID_CC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenCC" Type="nvarchar" MaxLength="50" />
-    <Property Name="Loai" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenCC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Loai" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Diem" Type="nvarchar" MaxLength="50" />
-    <Property Name="DonViCap" Type="nvarchar" MaxLength="200" />
-    <Property Name="NgayCap" Type="datetime" />
-    <Property Name="ThoiHan" Type="nvarchar" MaxLength="50" />
+    <Property Name="DonViCap" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="NgayCap" Type="date" Nullable="false" />
+    <Property Name="ThoiHan" Type="date" Nullable="false" />
     <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
-    <Property Name="ConHan" Type="bit" />
-    <Property Name="ID_NV" Type="int" />
+    <Property Name="ConHan" Type="bit" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_DanToc">
     <Key>
       <PropertyRef Name="ID_DT" />
     </Key>
-    <Property Name="ID_DT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_DT" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenDT" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_DieuChuyen">
     <Key>
       <PropertyRef Name="SoQD" />
     </Key>
     <Property Name="SoQD" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Ngay" Type="datetime" />
-    <Property Name="ID_NV" Type="int" />
-    <Property Name="ID_PB" Type="int" />
-    <Property Name="ID_BP" Type="int" />
-    <Property Name="ID_PBNew" Type="int" />
-    <Property Name="ID_BPNew" Type="int" />
-    <Property Name="LiDo" Type="nvarchar(max)" />
+    <Property Name="NgayApDung" Type="date" Nullable="false" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_PB" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_BP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_PBNew" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_BPNew" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LiDo" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="GhiChu" Type="nvarchar(max)" />
     <Property Name="Create_By" Type="int" />
     <Property Name="Create_Time" Type="datetime" />
@@ -101,90 +162,131 @@
       <PropertyRef Name="SoHD" />
     </Key>
     <Property Name="SoHD" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
-    <Property Name="NgayKetThuc" Type="datetime" Nullable="false" />
-    <Property Name="NgayKy" Type="datetime" Nullable="false" />
-    <Property Name="LanKy" Type="int" Nullable="false" />
-    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="NgayBatDau" Type="date" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="date" Nullable="false" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="LanKi" Type="int" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ThoiHan" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="LuongThoaThuan" Type="float" Nullable="false" />
-    <Property Name="ID_NV" Type="int" />
-    <Property Name="ID_CT" Type="int" />
-    <Property Name="Delete_By" Type="int" />
+    <Property Name="HeSoLuong" Type="float" Nullable="false" />
+    <Property Name="LuongCoBan" Type="money" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Delete_Time" Type="datetime" />
-    <Property Name="Update_By" Type="int" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Update_Time" Type="datetime" />
-    <Property Name="Create_By" Type="int" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Create_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_KyCong">
+    <Key>
+      <PropertyRef Name="MaKyCong" />
+    </Key>
+    <Property Name="MaKyCong" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Thang" Type="int" Nullable="false" />
+    <Property Name="Nam" Type="int" Nullable="false" />
+    <Property Name="Khoa" Type="bit" Nullable="false" />
+    <Property Name="CongChuan" Type="int" Nullable="false" />
+    <Property Name="TrangThai" Type="bit" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_KyCongChiTiet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKyCong" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="D1" Type="nvarchar" MaxLength="50" />
+    <Property Name="D2" Type="nvarchar" MaxLength="50" />
+    <Property Name="D3" Type="nvarchar" MaxLength="50" />
+    <Property Name="D4" Type="nvarchar" MaxLength="50" />
+    <Property Name="D5" Type="nvarchar" MaxLength="50" />
+    <Property Name="D6" Type="nvarchar" MaxLength="50" />
+    <Property Name="D7" Type="nvarchar" MaxLength="50" />
+    <Property Name="D8" Type="nvarchar" MaxLength="50" />
+    <Property Name="D9" Type="nvarchar" MaxLength="50" />
+    <Property Name="D10" Type="nvarchar" MaxLength="50" />
+    <Property Name="D11" Type="nvarchar" MaxLength="50" />
+    <Property Name="D12" Type="nvarchar" MaxLength="50" />
+    <Property Name="D13" Type="nvarchar" MaxLength="50" />
+    <Property Name="D14" Type="nvarchar" MaxLength="50" />
+    <Property Name="D15" Type="nvarchar" MaxLength="50" />
+    <Property Name="D16" Type="nvarchar" MaxLength="50" />
+    <Property Name="D17" Type="nvarchar" MaxLength="50" />
+    <Property Name="D18" Type="nvarchar" MaxLength="50" />
+    <Property Name="D19" Type="nvarchar" MaxLength="50" />
+    <Property Name="D20" Type="nvarchar" MaxLength="50" />
+    <Property Name="D21" Type="nvarchar" MaxLength="50" />
+    <Property Name="D22" Type="nvarchar" MaxLength="50" />
+    <Property Name="D23" Type="nvarchar" MaxLength="50" />
+    <Property Name="D24" Type="nvarchar" MaxLength="50" />
+    <Property Name="D25" Type="nvarchar" MaxLength="50" />
+    <Property Name="D26" Type="nvarchar" MaxLength="50" />
+    <Property Name="D27" Type="nvarchar" MaxLength="50" />
+    <Property Name="D28" Type="nvarchar" MaxLength="50" />
+    <Property Name="D29" Type="nvarchar" MaxLength="50" />
+    <Property Name="D30" Type="nvarchar" MaxLength="50" />
+    <Property Name="D31" Type="nvarchar" MaxLength="50" />
+    <Property Name="CongChuan" Type="int" />
+    <Property Name="SoNgayThuong" Type="float" Nullable="false" />
+    <Property Name="SoNgayPhep" Type="float" Nullable="false" />
+    <Property Name="SoNgayKhongPhep" Type="float" Nullable="false" />
+    <Property Name="SoNgayLe" Type="float" Nullable="false" />
+    <Property Name="SoNgayChuNhat" Type="float" Nullable="false" />
+    <Property Name="CongThucTe" Type="float" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_KhenThuongKyLuat">
     <Key>
-      <PropertyRef Name="SoQuyetDinh" />
+      <PropertyRef Name="SoQD" />
     </Key>
-    <Property Name="SoQuyetDinh" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="LyDo" Type="nvarchar" MaxLength="200" />
-    <Property Name="NoiDung" Type="nvarchar(max)" />
-    <Property Name="Ngay" Type="datetime" />
-    <Property Name="Loai" Type="int" />
-    <Property Name="ID_NV" Type="int" />
-    <Property Name="TuNgay" Type="datetime" />
-    <Property Name="DenNgay" Type="datetime" />
-    <Property Name="Create_By" Type="int" />
+    <Property Name="SoQD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LiDo" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="Loai" Type="int" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TuNgay" Type="date" Nullable="false" />
+    <Property Name="DenNgay" Type="date" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Create_Time" Type="datetime" />
-    <Property Name="Update_By" Type="int" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Update_Time" Type="datetime" />
-    <Property Name="Delete_By" Type="int" />
-    <Property Name="Delete_Time" Type="datetime" />
-  </EntityType>
-  <EntityType Name="tb_LoaiCa">
-    <Key>
-      <PropertyRef Name="ID_LCa" />
-    </Key>
-    <Property Name="ID_LCa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenLoaiCa" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="HeSo" Type="float" Nullable="false" />
-    <Property Name="Create_By" Type="int" />
-    <Property Name="Create_Time" Type="datetime" />
-    <Property Name="Update_By" Type="int" />
-    <Property Name="Update_Time" Type="datetime" />
-    <Property Name="Delete_By" Type="int" />
-    <Property Name="Delete_Time" Type="datetime" />
-  </EntityType>
-  <EntityType Name="tb_LoaiCong">
-    <Key>
-      <PropertyRef Name="ID_LCo" />
-    </Key>
-    <Property Name="ID_LCo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenLoaiCong" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="HeSo" Type="float" Nullable="false" />
-    <Property Name="Create_By" Type="int" />
-    <Property Name="Create_Time" Type="datetime" />
-    <Property Name="Update_By" Type="int" />
-    <Property Name="Update_Time" Type="datetime" />
-    <Property Name="Delete_By" Type="int" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_NhanVien">
     <Key>
       <PropertyRef Name="ID_NV" />
     </Key>
-    <Property Name="ID_NV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ten" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="GioiTinh" Type="bit" Nullable="false" />
-    <Property Name="NgaySinh" Type="datetime" Nullable="false" />
-    <Property Name="NgayLam" Type="datetime" Nullable="false" />
+    <Property Name="NgaySinh" Type="date" Nullable="false" />
+    <Property Name="NgayLam" Type="date" Nullable="false" />
     <Property Name="DienThoai" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="CCCD" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Anh" Type="varbinary(max)" />
-    <Property Name="ID_PB" Type="int" Nullable="false" />
-    <Property Name="ID_CV" Type="int" Nullable="false" />
-    <Property Name="ID_BP" Type="int" Nullable="false" />
-    <Property Name="ID_TD" Type="int" Nullable="false" />
-    <Property Name="ID_DT" Type="int" Nullable="false" />
-    <Property Name="ID_TG" Type="int" Nullable="false" />
-    <Property Name="ID_CT" Type="int" Nullable="false" />
+    <Property Name="ID_PB" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_CV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_BP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_TD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_DT" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_TG" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="DaThoiViec" Type="bit" />
   </EntityType>
   <EntityType Name="tb_NhanVien_PhuCap">
@@ -192,77 +294,125 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_NV" Type="int" Nullable="false" />
-    <Property Name="ID_PC" Type="int" Nullable="false" />
-    <Property Name="Ngay" Type="datetime" Nullable="false" />
-    <Property Name="NoiDung" Type="nvarchar(max)" />
-    <Property Name="SoTien" Type="float" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_PC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nchar" MaxLength="10" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_PhongBan">
     <Key>
       <PropertyRef Name="ID_PB" />
     </Key>
-    <Property Name="ID_PB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PB" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenPB" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="ID_TruongPB" Type="int" />
+    <Property Name="ID_TruongPB" Type="nvarchar" MaxLength="50" />
+    <Property Name="MoTa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_PhuCap">
     <Key>
       <PropertyRef Name="ID_PC" />
     </Key>
-    <Property Name="ID_PC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PC" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenPC" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="SoTien" Type="float" Nullable="false" />
+    <Property Name="SoTien" Type="money" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_SYS_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Last_PWD_Change" Type="datetime" />
+    <Property Name="Disable" Type="bit" />
   </EntityType>
   <EntityType Name="tb_TangCa">
     <Key>
       <PropertyRef Name="ID_TC" />
     </Key>
-    <Property Name="ID_TC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nam" Type="int" Nullable="false" />
-    <Property Name="Thang" Type="int" Nullable="false" />
-    <Property Name="Ngay" Type="int" Nullable="false" />
+    <Property Name="ID_TC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayTC" Type="date" Nullable="false" />
     <Property Name="SoGio" Type="float" Nullable="false" />
-    <Property Name="ID_NV" Type="int" Nullable="false" />
-    <Property Name="ID_LTC" Type="int" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HeSo" Type="float" Nullable="false" />
+    <Property Name="SoTien" Type="money" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_TonGiao">
     <Key>
       <PropertyRef Name="ID_TG" />
     </Key>
-    <Property Name="ID_TG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TG" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenTG" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_ThangTien">
     <Key>
       <PropertyRef Name="SoQD" />
     </Key>
     <Property Name="SoQD" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="SoHD" Type="nvarchar" MaxLength="50" />
-    <Property Name="ID_NV" Type="int" />
-    <Property Name="LuongThoaThuan_OLD" Type="float" />
-    <Property Name="LuongThoaThuan_NEW" Type="float" />
-    <Property Name="GhiChu" Type="nvarchar" MaxLength="500" />
-    <Property Name="LyDo" Type="nvarchar" MaxLength="500" />
-    <Property Name="NgayApDung" Type="datetime" />
-    <Property Name="NgayKy" Type="datetime" />
-    <Property Name="Create_By" Type="int" />
+    <Property Name="SoHD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HeSoLuong_OLD" Type="float" Nullable="false" />
+    <Property Name="HeSoLuong_NEW" Type="float" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+    <Property Name="LiDo" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="NgayApDung" Type="date" Nullable="false" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="ID_CV_OLD" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_CV_NEW" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Create_Time" Type="datetime" />
-    <Property Name="Update_By" Type="int" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Update_Time" Type="datetime" />
-    <Property Name="Delete_By" Type="int" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
     <Property Name="Delete_Time" Type="datetime" />
-    <Property Name="ID_CV_Old" Type="int" />
-    <Property Name="ID_CV_New" Type="int" />
   </EntityType>
   <EntityType Name="tb_ThoiViec">
     <Key>
       <PropertyRef Name="SoQD" />
     </Key>
     <Property Name="SoQD" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="NgayNopDon" Type="datetime" />
-    <Property Name="NgayThoiViec" Type="datetime" />
-    <Property Name="LyDo" Type="nvarchar" MaxLength="200" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="NgayNopDon" Type="date" Nullable="false" />
+    <Property Name="NgayThoiViec" Type="date" Nullable="false" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LyDo" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="GhiChu" Type="nvarchar(max)" />
     <Property Name="Create_By" Type="int" />
     <Property Name="Create_Time" Type="datetime" />
@@ -270,49 +420,62 @@
     <Property Name="Update_Time" Type="datetime" />
     <Property Name="Delete_By" Type="int" />
     <Property Name="Delete_Time" Type="datetime" />
-    <Property Name="ID_NV" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_TrinhDo">
     <Key>
       <PropertyRef Name="ID_TD" />
     </Key>
-    <Property Name="ID_TD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TD" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TenTD" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DonViCap" Type="nvarchar" MaxLength="200" />
-    <Property Name="NgayCap" Type="datetime" />
+    <Property Name="DonViCap" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="NgayCap" Type="date" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
   <EntityType Name="tb_UngLuong">
     <Key>
       <PropertyRef Name="ID_UL" />
     </Key>
-    <Property Name="ID_UL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nam" Type="int" Nullable="false" />
-    <Property Name="Thang" Type="int" Nullable="false" />
-    <Property Name="Ngay" Type="int" Nullable="false" />
-    <Property Name="SoTien" Type="float" Nullable="false" />
-    <Property Name="TrangThai" Type="bit" Nullable="false" />
-    <Property Name="ID_NV" Type="int" Nullable="false" />
+    <Property Name="ID_UL" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_NV_Duyet" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayUL" Type="date" Nullable="false" />
+    <Property Name="NgayKi" Type="date" Nullable="false" />
+    <Property Name="SoTien" Type="money" Nullable="false" />
+    <Property Name="LiDo" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Time" Type="datetime" />
+    <Property Name="Delete_By" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delete_Time" Type="datetime" />
   </EntityType>
-  <Association Name="FK_tb_BangCong_tb_LoaiCong">
-    <End Role="tb_LoaiCong" Type="Self.tb_LoaiCong" Multiplicity="1" />
-    <End Role="tb_BangCong" Type="Self.tb_BangCong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_LoaiCong">
-        <PropertyRef Name="ID_LCo" />
-      </Principal>
-      <Dependent Role="tb_BangCong">
-        <PropertyRef Name="ID_LoaiCong" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tb_BangCong_tb_NhanVien">
+  <Association Name="FK_tb_BangCong_NV_CT_tb_NhanVien">
     <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
-    <End Role="tb_BangCong" Type="Self.tb_BangCong" Multiplicity="*" />
+    <End Role="tb_BangCong_NV_CT" Type="Self.tb_BangCong_NV_CT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
         <PropertyRef Name="ID_NV" />
       </Principal>
-      <Dependent Role="tb_BangCong">
+      <Dependent Role="tb_BangCong_NV_CT">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_BangLuong_tb_NhanVien">
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
+    <End Role="tb_BangLuong" Type="Self.tb_BangLuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_BangLuong">
         <PropertyRef Name="ID_NV" />
       </Dependent>
     </ReferentialConstraint>
@@ -329,8 +492,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tb_BoPhan_tb_PhongBan">
+    <End Role="tb_PhongBan" Type="Self.tb_PhongBan" Multiplicity="1" />
+    <End Role="tb_BoPhan" Type="Self.tb_BoPhan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_PhongBan">
+        <PropertyRef Name="ID_PB" />
+      </Principal>
+      <Dependent Role="tb_BoPhan">
+        <PropertyRef Name="ID_PB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tb_ChungChi_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
     <End Role="tb_ChungChi" Type="Self.tb_ChungChi" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
@@ -341,20 +516,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_DieuChinhLuong_tb_HopDong">
-    <End Role="tb_HopDong" Type="Self.tb_HopDong" Multiplicity="0..1" />
-    <End Role="tb_ThangTien" Type="Self.tb_ThangTien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_HopDong">
-        <PropertyRef Name="SoHD" />
-      </Principal>
-      <Dependent Role="tb_ThangTien">
-        <PropertyRef Name="SoHD" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tb_DieuChinhLuong_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
     <End Role="tb_ThangTien" Type="Self.tb_ThangTien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
@@ -366,7 +529,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_DieuChuyen_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
     <End Role="tb_DieuChuyen" Type="Self.tb_DieuChuyen" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
@@ -378,7 +541,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tb_HopDong_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
     <End Role="tb_HopDong" Type="Self.tb_HopDong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
@@ -389,8 +552,32 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tb_KyCongChiTiet_tb_KyCong">
+    <End Role="tb_KyCong" Type="Self.tb_KyCong" Multiplicity="1" />
+    <End Role="tb_KyCongChiTiet" Type="Self.tb_KyCongChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_KyCong">
+        <PropertyRef Name="MaKyCong" />
+      </Principal>
+      <Dependent Role="tb_KyCongChiTiet">
+        <PropertyRef Name="MaKyCong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_KyCongChiTiet_tb_NhanVien">
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
+    <End Role="tb_KyCongChiTiet" Type="Self.tb_KyCongChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
+      </Principal>
+      <Dependent Role="tb_KyCongChiTiet">
+        <PropertyRef Name="ID_NV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tb_KhenThuongKyLuat_tb_NhanVien">
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="0..1" />
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
     <End Role="tb_KhenThuongKyLuat" Type="Self.tb_KhenThuongKyLuat" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_NhanVien">
@@ -434,18 +621,6 @@
       </Principal>
       <Dependent Role="tb_NhanVien">
         <PropertyRef Name="ID_BP" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tb_NhanVien_tb_CongTy">
-    <End Role="tb_CongTy" Type="Self.tb_CongTy" Multiplicity="1" />
-    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_CongTy">
-        <PropertyRef Name="ID_CT" />
-      </Principal>
-      <Dependent Role="tb_NhanVien">
-        <PropertyRef Name="ID_CT" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -509,15 +684,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_TangCa_tb_LoaiTangCa">
-    <End Role="tb_LoaiCa" Type="Self.tb_LoaiCa" Multiplicity="1" />
-    <End Role="tb_TangCa" Type="Self.tb_TangCa" Multiplicity="*" />
+  <Association Name="FK_tb_SYS_User_tb_NhanVien1">
+    <End Role="tb_NhanVien" Type="Self.tb_NhanVien" Multiplicity="1" />
+    <End Role="tb_SYS_User" Type="Self.tb_SYS_User" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tb_LoaiCa">
-        <PropertyRef Name="ID_LCa" />
+      <Principal Role="tb_NhanVien">
+        <PropertyRef Name="ID_NV" />
       </Principal>
-      <Dependent Role="tb_TangCa">
-        <PropertyRef Name="ID_LTC" />
+      <Dependent Role="tb_SYS_User">
+        <PropertyRef Name="ID_NV" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -557,48 +732,53 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QLNS_CELLPHONESModelStoreContainer">
-    <EntitySet Name="tb_BangCong" EntityType="Self.tb_BangCong" Schema="dbo" store:Type="Tables" />
+  <Function Name="fn_DemNhanVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="LoaiID" Type="char" Mode="In" />
+  </Function>
+  <EntityContainer Name="QuanLyNhanSu_MasterModelStoreContainer">
+    <EntitySet Name="tb_BangCong_NV_CT" EntityType="Self.tb_BangCong_NV_CT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_BangLuong" EntityType="Self.tb_BangLuong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_BaoHiem" EntityType="Self.tb_BaoHiem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_BoPhan" EntityType="Self.tb_BoPhan" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tb_CongTy" EntityType="Self.tb_CongTy" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_ChucVu" EntityType="Self.tb_ChucVu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_ChungChi" EntityType="Self.tb_ChungChi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DanToc" EntityType="Self.tb_DanToc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DieuChuyen" EntityType="Self.tb_DieuChuyen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HopDong" EntityType="Self.tb_HopDong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_KyCong" EntityType="Self.tb_KyCong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_KyCongChiTiet" EntityType="Self.tb_KyCongChiTiet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_KhenThuongKyLuat" EntityType="Self.tb_KhenThuongKyLuat" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tb_LoaiCa" EntityType="Self.tb_LoaiCa" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tb_LoaiCong" EntityType="Self.tb_LoaiCong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_NhanVien" EntityType="Self.tb_NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_NhanVien_PhuCap" EntityType="Self.tb_NhanVien_PhuCap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_PhongBan" EntityType="Self.tb_PhongBan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_PhuCap" EntityType="Self.tb_PhuCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_SYS_User" EntityType="Self.tb_SYS_User" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_TangCa" EntityType="Self.tb_TangCa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_TonGiao" EntityType="Self.tb_TonGiao" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_ThangTien" EntityType="Self.tb_ThangTien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_ThoiViec" EntityType="Self.tb_ThoiViec" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_TrinhDo" EntityType="Self.tb_TrinhDo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_UngLuong" EntityType="Self.tb_UngLuong" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_tb_BangCong_tb_LoaiCong" Association="Self.FK_tb_BangCong_tb_LoaiCong">
-      <End Role="tb_LoaiCong" EntitySet="tb_LoaiCong" />
-      <End Role="tb_BangCong" EntitySet="tb_BangCong" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_BangCong_tb_NhanVien" Association="Self.FK_tb_BangCong_tb_NhanVien">
+    <AssociationSet Name="FK_tb_BangCong_NV_CT_tb_NhanVien" Association="Self.FK_tb_BangCong_NV_CT_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-      <End Role="tb_BangCong" EntitySet="tb_BangCong" />
+      <End Role="tb_BangCong_NV_CT" EntitySet="tb_BangCong_NV_CT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_BangLuong_tb_NhanVien" Association="Self.FK_tb_BangLuong_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_BangLuong" EntitySet="tb_BangLuong" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_BaoHiem_tb_NhanVien" Association="Self.FK_tb_BaoHiem_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
       <End Role="tb_BaoHiem" EntitySet="tb_BaoHiem" />
     </AssociationSet>
+    <AssociationSet Name="FK_tb_BoPhan_tb_PhongBan" Association="Self.FK_tb_BoPhan_tb_PhongBan">
+      <End Role="tb_PhongBan" EntitySet="tb_PhongBan" />
+      <End Role="tb_BoPhan" EntitySet="tb_BoPhan" />
+    </AssociationSet>
     <AssociationSet Name="FK_tb_ChungChi_tb_NhanVien" Association="Self.FK_tb_ChungChi_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
       <End Role="tb_ChungChi" EntitySet="tb_ChungChi" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_DieuChinhLuong_tb_HopDong" Association="Self.FK_tb_DieuChinhLuong_tb_HopDong">
-      <End Role="tb_HopDong" EntitySet="tb_HopDong" />
-      <End Role="tb_ThangTien" EntitySet="tb_ThangTien" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_DieuChinhLuong_tb_NhanVien" Association="Self.FK_tb_DieuChinhLuong_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
@@ -611,6 +791,14 @@
     <AssociationSet Name="FK_tb_HopDong_tb_NhanVien" Association="Self.FK_tb_HopDong_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
       <End Role="tb_HopDong" EntitySet="tb_HopDong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_KyCongChiTiet_tb_KyCong" Association="Self.FK_tb_KyCongChiTiet_tb_KyCong">
+      <End Role="tb_KyCong" EntitySet="tb_KyCong" />
+      <End Role="tb_KyCongChiTiet" EntitySet="tb_KyCongChiTiet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_KyCongChiTiet_tb_NhanVien" Association="Self.FK_tb_KyCongChiTiet_tb_NhanVien">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_KyCongChiTiet" EntitySet="tb_KyCongChiTiet" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_KhenThuongKyLuat_tb_NhanVien" Association="Self.FK_tb_KhenThuongKyLuat_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
@@ -626,10 +814,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_tb_NhanVien_tb_BoPhan" Association="Self.FK_tb_NhanVien_tb_BoPhan">
       <End Role="tb_BoPhan" EntitySet="tb_BoPhan" />
-      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_NhanVien_tb_CongTy" Association="Self.FK_tb_NhanVien_tb_CongTy">
-      <End Role="tb_CongTy" EntitySet="tb_CongTy" />
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_NhanVien_tb_ChucVu" Association="Self.FK_tb_NhanVien_tb_ChucVu">
@@ -652,9 +836,9 @@
       <End Role="tb_TrinhDo" EntitySet="tb_TrinhDo" />
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
     </AssociationSet>
-    <AssociationSet Name="FK_tb_TangCa_tb_LoaiTangCa" Association="Self.FK_tb_TangCa_tb_LoaiTangCa">
-      <End Role="tb_LoaiCa" EntitySet="tb_LoaiCa" />
-      <End Role="tb_TangCa" EntitySet="tb_TangCa" />
+    <AssociationSet Name="FK_tb_SYS_User_tb_NhanVien1" Association="Self.FK_tb_SYS_User_tb_NhanVien1">
+      <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />
+      <End Role="tb_SYS_User" EntitySet="tb_SYS_User" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_TangCa_tb_NhanVien" Association="Self.FK_tb_TangCa_tb_NhanVien">
       <End Role="tb_NhanVien" EntitySet="tb_NhanVien" />

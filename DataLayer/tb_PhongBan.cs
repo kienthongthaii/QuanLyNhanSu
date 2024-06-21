@@ -17,13 +17,23 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_PhongBan()
         {
+            this.tb_BoPhan = new HashSet<tb_BoPhan>();
             this.tb_NhanVien = new HashSet<tb_NhanVien>();
         }
     
-        public int ID_PB { get; set; }
+        public string ID_PB { get; set; }
         public string TenPB { get; set; }
-        public Nullable<int> ID_TruongPB { get; set; }
+        public string ID_TruongPB { get; set; }
+        public string MoTa { get; set; }
+        public string Create_By { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_BoPhan> tb_BoPhan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_NhanVien> tb_NhanVien { get; set; }
     }

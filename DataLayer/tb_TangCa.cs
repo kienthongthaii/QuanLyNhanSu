@@ -14,15 +14,20 @@ namespace DataLayer
     
     public partial class tb_TangCa
     {
-        public int ID_TC { get; set; }
-        public int Nam { get; set; }
-        public int Thang { get; set; }
-        public int Ngay { get; set; }
+        public string ID_TC { get; set; }
+        public System.DateTime NgayTC { get; set; }
         public double SoGio { get; set; }
-        public int ID_NV { get; set; }
-        public int ID_LTC { get; set; }
+        public string ID_NV { get; set; }
+        public double HeSo { get; set; }
+        public decimal SoTien { get; set; }
+        public string GhiChu { get; set; }
+        public string Create_By { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     
         public virtual tb_NhanVien tb_NhanVien { get; set; }
-        public virtual tb_LoaiCa tb_LoaiCa { get; set; }
     }
 }

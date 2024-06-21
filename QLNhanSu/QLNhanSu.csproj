@@ -49,8 +49,10 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
     <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -60,6 +62,7 @@
     <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v22.2" />
     <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2" />
     <Reference Include="DevExpress.Sparkline.v22.2.Core" />
     <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -91,11 +94,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CHAMCONG\frmLoaiCong.cs">
+    <Compile Include="CHAMCONG\frmBangCongChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CHAMCONG\frmLoaiCong.Designer.cs">
-      <DependentUpon>frmLoaiCong.cs</DependentUpon>
+    <Compile Include="CHAMCONG\frmBangCongChiTiet.Designer.cs">
+      <DependentUpon>frmBangCongChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHAMCONG\frmBangCongCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAMCONG\frmBangCongCT.Designer.cs">
+      <DependentUpon>frmBangCongCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHAMCONG\frmCapNhatNgayCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAMCONG\frmCapNhatNgayCong.Designer.cs">
+      <DependentUpon>frmCapNhatNgayCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHAMCONG\frmChamCong_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAMCONG\frmChamCong_NhanVien.Designer.cs">
+      <DependentUpon>frmChamCong_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHAMCONG\frmKyCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAMCONG\frmKyCong.Designer.cs">
+      <DependentUpon>frmKyCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\frmWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\frmWaiting.Designer.cs">
+      <DependentUpon>frmWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcions.cs" />
+    <Compile Include="HETHONG\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LUONG\frmBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LUONG\frmBangLuong.Designer.cs">
+      <DependentUpon>frmBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LUONG\frmPhuCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LUONG\frmPhuCap.Designer.cs">
+      <DependentUpon>frmPhuCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LUONG\frmTangCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LUONG\frmTangCa.Designer.cs">
+      <DependentUpon>frmTangCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LUONG\frmUngLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LUONG\frmUngLuong.Designer.cs">
+      <DependentUpon>frmUngLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="NHANSU\frmBoPhan.cs">
       <SubType>Form</SubType>
@@ -109,23 +179,11 @@
     <Compile Include="NHANSU\frmChucVu.Designer.cs">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NHANSU\frmCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NHANSU\frmCongTy.Designer.cs">
-      <DependentUpon>frmCongTy.cs</DependentUpon>
-    </Compile>
     <Compile Include="NHANSU\frmDanToc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NHANSU\frmDanToc.Designer.cs">
       <DependentUpon>frmDanToc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CHAMCONG\frmLoaiCa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CHAMCONG\frmLoaiCa.Designer.cs">
-      <DependentUpon>frmLoaiCa.cs</DependentUpon>
     </Compile>
     <Compile Include="NHANSU\frmThangTien.cs">
       <SubType>Form</SubType>
@@ -194,6 +252,24 @@
     <Compile Include="Reports\reportDanhSachNhanVien.Designer.cs">
       <DependentUpon>reportDanhSachNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptBangCongCTNV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBangCongCTNV.Designer.cs">
+      <DependentUpon>rptBangCongCTNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBangCongTongHop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBangCongTongHop.Designer.cs">
+      <DependentUpon>rptBangCongTongHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBangLuong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBangLuong.Designer.cs">
+      <DependentUpon>rptBangLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\rptHopDongLaoDong.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -206,8 +282,41 @@
     <Compile Include="NHANSU\ThoiViec.Designer.cs">
       <DependentUpon>ThoiViec.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CHAMCONG\frmLoaiCong.resx">
-      <DependentUpon>frmLoaiCong.cs</DependentUpon>
+    <EmbeddedResource Include="CHAMCONG\frmBangCongChiTiet.resx">
+      <DependentUpon>frmBangCongChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHAMCONG\frmBangCongCT.resx">
+      <DependentUpon>frmBangCongCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHAMCONG\frmCapNhatNgayCong.resx">
+      <DependentUpon>frmCapNhatNgayCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHAMCONG\frmChamCong_NhanVien.resx">
+      <DependentUpon>frmChamCong_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHAMCONG\frmKyCong.resx">
+      <DependentUpon>frmKyCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\frmWaiting.resx">
+      <DependentUpon>frmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LUONG\frmBangLuong.resx">
+      <DependentUpon>frmBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LUONG\frmPhuCap.resx">
+      <DependentUpon>frmPhuCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LUONG\frmTangCa.resx">
+      <DependentUpon>frmTangCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LUONG\frmUngLuong.resx">
+      <DependentUpon>frmUngLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NHANSU\frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
@@ -215,14 +324,8 @@
     <EmbeddedResource Include="NHANSU\frmChucVu.resx">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NHANSU\frmCongTy.resx">
-      <DependentUpon>frmCongTy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NHANSU\frmDanToc.resx">
       <DependentUpon>frmDanToc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CHAMCONG\frmLoaiCa.resx">
-      <DependentUpon>frmLoaiCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NHANSU\frmThangTien.resx">
       <DependentUpon>frmThangTien.cs</DependentUpon>
@@ -259,6 +362,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\reportDanhSachNhanVien.resx">
       <DependentUpon>reportDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBangCongCTNV.resx">
+      <DependentUpon>rptBangCongCTNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBangCongTongHop.resx">
+      <DependentUpon>rptBangCongTongHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBangLuong.resx">
+      <DependentUpon>rptBangLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptHopDongLaoDong.resx">
       <DependentUpon>rptHopDongLaoDong.cs</DependentUpon>
@@ -312,9 +424,7 @@
   <ItemGroup>
     <None Include="Resources\logoCellPhoneS.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LUONG\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

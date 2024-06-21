@@ -14,13 +14,20 @@ namespace DataLayer
     
     public partial class tb_UngLuong
     {
-        public int ID_UL { get; set; }
-        public int Nam { get; set; }
-        public int Thang { get; set; }
-        public int Ngay { get; set; }
-        public double SoTien { get; set; }
-        public bool TrangThai { get; set; }
-        public int ID_NV { get; set; }
+        public string ID_UL { get; set; }
+        public string ID_NV { get; set; }
+        public string ID_NV_Duyet { get; set; }
+        public System.DateTime NgayUL { get; set; }
+        public System.DateTime NgayKi { get; set; }
+        public decimal SoTien { get; set; }
+        public string LiDo { get; set; }
+        public string GhiChu { get; set; }
+        public string Create_By { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     
         public virtual tb_NhanVien tb_NhanVien { get; set; }
     }

@@ -10,3 +10,15 @@ D:\Code_UFM\QLNS_CellPhoneS\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Code_UFM\QLNS_CellPhoneS\DataLayer\bin\Debug\EntityFramework.xml
 D:\Code_UFM\QLNS_CellPhoneS\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Code_UFM\QLNS_CellPhoneS\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\DataLayer.dll
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\DataLayer.pdb
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\EntityFramework.dll
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\EntityFramework.xml
+D:\Code_UFM\QLNS\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code_UFM\QLNS\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+D:\Code_UFM\QLNS\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\Code_UFM\QLNS\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
+D:\Code_UFM\QLNS\DataLayer\obj\Debug\DataLayer.dll
+D:\Code_UFM\QLNS\DataLayer\obj\Debug\DataLayer.pdb

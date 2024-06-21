@@ -8,9 +8,17 @@ namespace BusinessLayer.DTO
 {
     public class PhongBan_DTO
     {
-        public int ID_PB { get; set; }
+        public string ID_PB { get; set; }
         public string TenPB { get; set; }
-        public Nullable<int> ID_TruongPB { get; set; }
+        public string ID_TruongPB { get; set; }
         public string TenTruongPB { get; set; }
+        public string MoTa { get; set; }
+        public string Create_By { get; set; }
+        public int SoThanhVien { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     }
 }

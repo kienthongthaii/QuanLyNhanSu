@@ -21,7 +21,7 @@ namespace QLNhanSu
         }
         TrinhDo _trinhdo;
         bool _add;
-        int _id;
+        string _id;
         bool _click;
         //Ẩn hiện các nút
         void showHide(bool check)
@@ -131,7 +131,7 @@ namespace QLNhanSu
         private void gvDanhSach_Click(object sender, EventArgs e)
         {
             _click = true;
-            _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_TD").ToString());
+            _id = gvDanhSach.GetFocusedRowCellValue("ID_TD").ToString();
             txtTenTD.Text = gvDanhSach.GetFocusedRowCellValue("TenTD").ToString();
         }
     }

@@ -4,15 +4,17 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BusinessLayer
 {
     public class BoPhan
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
-        public tb_BoPhan getItem(int id)
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
+        public tb_BoPhan getItem(string id)
         {
             return db.tb_BoPhan.FirstOrDefault(x => x.ID_BP == id);
 
@@ -21,9 +23,9 @@ namespace BusinessLayer
         {
             return db.tb_BoPhan.ToList();
         }
-        public List<tb_BoPhan> getlistWithPB(int _id)
+        public List<tb_BoPhan> getlistWithPB(string _id)
         {
-            return db.tb_BoPhan.ToList().Where(x=>x.ID_PB==_id).ToList();
+            return db.tb_BoPhan.ToList().Where(x=>x.ID_PB ==_id).ToList();
         }
         public List<BoPhan_DTO> getlistFull()
         {
@@ -39,7 +41,7 @@ namespace BusinessLayer
                 var nv = db.tb_NhanVien.FirstOrDefault(x => x.ID_NV == item.ID_TruongBP);
                 if (nv != null)
                 {
-                    bp.TenTruongBP = nv.Ten;
+                    bp.TenTruongBP = nv.TenNV;
                 }
                 else
                 {
@@ -48,6 +50,8 @@ namespace BusinessLayer
                 var pb = db.tb_PhongBan.FirstOrDefault(y => y.ID_PB == item.ID_PB);
                 bp.TenPB = pb.TenPB;
                 bp.SoThanhVien = lstNV.Count(x => x.ID_BP == item.ID_BP);
+                bp.Delete_By = item.Delete_By;
+                bp.MoTa = item.MoTa;
                 list_bp_DTO.Add(bp);
 
             }
@@ -70,6 +74,7 @@ namespace BusinessLayer
         }
         public tb_BoPhan Update(tb_BoPhan bp)
         {
+
             try
             {
                 var upd_bp = db.tb_BoPhan.FirstOrDefault(x => x.ID_BP == bp.ID_BP);
@@ -84,13 +89,30 @@ namespace BusinessLayer
                 throw new Exception("Lỗi : " + ex.Message);
             }
         }
-        public void Delete(int id)
+        public void Delete(string id, string id_nv)
         {
             try
             {
                 var del_bp = db.tb_BoPhan.FirstOrDefault(x => x.ID_BP == id);
-                db.tb_BoPhan.Remove(del_bp);
-                db.SaveChanges();
+                if (del_bp.Delete_By != null)
+                {
+                    DialogResult result = MessageBox.Show("Bạn có xác nhận sẽ xóa dữ liệu này khỏi database?", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    if (result == DialogResult.OK)
+                    {
+                        db.tb_BoPhan.Remove(del_bp);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        return; 
+                    }
+                }
+                else
+                {
+                    del_bp.Delete_By = id_nv;
+                    del_bp.Delete_Time = DateTime.Now;
+                    db.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

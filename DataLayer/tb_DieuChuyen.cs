@@ -15,12 +15,14 @@ namespace DataLayer
     public partial class tb_DieuChuyen
     {
         public string SoQD { get; set; }
-        public Nullable<System.DateTime> Ngay { get; set; }
-        public Nullable<int> ID_NV { get; set; }
-        public Nullable<int> ID_PB { get; set; }
-        public Nullable<int> ID_BP { get; set; }
-        public Nullable<int> ID_PBNew { get; set; }
-        public Nullable<int> ID_BPNew { get; set; }
+        public System.DateTime NgayApDung { get; set; }
+        public System.DateTime NgayKi { get; set; }
+        public string ID_NV { get; set; }
+        public string ID_NV_Duyet { get; set; }
+        public string ID_PB { get; set; }
+        public string ID_BP { get; set; }
+        public string ID_PBNew { get; set; }
+        public string ID_BPNew { get; set; }
         public string LiDo { get; set; }
         public string GhiChu { get; set; }
         public Nullable<int> Create_By { get; set; }

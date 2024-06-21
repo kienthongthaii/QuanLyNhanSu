@@ -17,21 +17,24 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_NhanVien()
         {
-            this.tb_BangCong = new HashSet<tb_BangCong>();
+            this.tb_BangLuong = new HashSet<tb_BangLuong>();
             this.tb_BaoHiem = new HashSet<tb_BaoHiem>();
             this.tb_ChungChi = new HashSet<tb_ChungChi>();
             this.tb_DieuChuyen = new HashSet<tb_DieuChuyen>();
             this.tb_HopDong = new HashSet<tb_HopDong>();
+            this.tb_KyCongChiTiet = new HashSet<tb_KyCongChiTiet>();
             this.tb_KhenThuongKyLuat = new HashSet<tb_KhenThuongKyLuat>();
             this.tb_ThangTien = new HashSet<tb_ThangTien>();
             this.tb_NhanVien_PhuCap = new HashSet<tb_NhanVien_PhuCap>();
+            this.tb_SYS_User = new HashSet<tb_SYS_User>();
             this.tb_TangCa = new HashSet<tb_TangCa>();
             this.tb_ThoiViec = new HashSet<tb_ThoiViec>();
             this.tb_UngLuong = new HashSet<tb_UngLuong>();
+            this.tb_BangCong_NV_CT = new HashSet<tb_BangCong_NV_CT>();
         }
     
-        public int ID_NV { get; set; }
-        public string Ten { get; set; }
+        public string ID_NV { get; set; }
+        public string TenNV { get; set; }
         public bool GioiTinh { get; set; }
         public System.DateTime NgaySinh { get; set; }
         public System.DateTime NgayLam { get; set; }
@@ -40,21 +43,19 @@ namespace DataLayer
         public string DiaChi { get; set; }
         public string CCCD { get; set; }
         public byte[] Anh { get; set; }
-        public int ID_PB { get; set; }
-        public int ID_CV { get; set; }
-        public int ID_BP { get; set; }
-        public int ID_TD { get; set; }
-        public int ID_DT { get; set; }
-        public int ID_TG { get; set; }
-        public int ID_CT { get; set; }
+        public string ID_PB { get; set; }
+        public string ID_CV { get; set; }
+        public string ID_BP { get; set; }
+        public string ID_TD { get; set; }
+        public string ID_DT { get; set; }
+        public string ID_TG { get; set; }
         public Nullable<bool> DaThoiViec { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_BangCong> tb_BangCong { get; set; }
+        public virtual ICollection<tb_BangLuong> tb_BangLuong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_BaoHiem> tb_BaoHiem { get; set; }
         public virtual tb_BoPhan tb_BoPhan { get; set; }
-        public virtual tb_CongTy tb_CongTy { get; set; }
         public virtual tb_ChucVu tb_ChucVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_ChungChi> tb_ChungChi { get; set; }
@@ -63,6 +64,8 @@ namespace DataLayer
         public virtual ICollection<tb_DieuChuyen> tb_DieuChuyen { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_HopDong> tb_HopDong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_KyCongChiTiet> tb_KyCongChiTiet { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_KhenThuongKyLuat> tb_KhenThuongKyLuat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -73,10 +76,14 @@ namespace DataLayer
         public virtual tb_TonGiao tb_TonGiao { get; set; }
         public virtual tb_TrinhDo tb_TrinhDo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_SYS_User> tb_SYS_User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_TangCa> tb_TangCa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_ThoiViec> tb_ThoiViec { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_UngLuong> tb_UngLuong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_BangCong_NV_CT> tb_BangCong_NV_CT { get; set; }
     }
 }

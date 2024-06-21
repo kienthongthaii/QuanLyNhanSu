@@ -357,7 +357,7 @@
             "Khen Thưởng"});
             this.cbLoai.Location = new System.Drawing.Point(475, 51);
             this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(148, 26);
+            this.cbLoai.Size = new System.Drawing.Size(114, 26);
             this.cbLoai.TabIndex = 23;
             this.cbLoai.SelectedIndexChanged += new System.EventHandler(this.cbLoai_SelectedIndexChanged);
             // 

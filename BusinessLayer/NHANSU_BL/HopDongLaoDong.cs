@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public class HopDongLaoDong
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
         public tb_HopDong getItem( String soHD)
         {
             return db.tb_HopDong.FirstOrDefault(x=>x.SoHD==soHD);
@@ -28,30 +28,30 @@ namespace BusinessLayer
             {
                 hopDong_DTO = new HopDong_DTO();
                 hopDong_DTO.SoHD = item.SoHD;
-                hopDong_DTO.NgayBatDau = item.NgayBatDau.ToString("dd/mm/yyyy");//"Từ ngày "+item.NgayBatDau.ToString("dd/mm/yyyy").Substring(0,2)+" tháng "+ item.NgayBatDau.ToString("dd/mm/yyyy").Substring(3, 2) + " năm " + item.NgayBatDau.ToString("dd/mm/yyyy").Substring(6);
-                hopDong_DTO.NgayKetThuc = item.NgayKetThuc.ToString("dd/mm/yyyy");
-                hopDong_DTO.NgayKy = item.NgayKy.ToString("dd/mm/yyyy");
-                hopDong_DTO.LanKy = item.LanKy;
-                hopDong_DTO.LuongThoaThuan = item.LuongThoaThuan;
+                hopDong_DTO.NgayBatDau = item.NgayBatDau;//"Từ ngày "+item.NgayBatDau.ToString("dd/mm/yyyy").Substring(0,2)+" tháng "+ item.NgayBatDau.ToString("dd/mm/yyyy").Substring(3, 2) + " năm " + item.NgayBatDau.ToString("dd/mm/yyyy").Substring(6);
+                hopDong_DTO.NgayKetThuc = item.NgayKetThuc;
+                hopDong_DTO.NgayKi = item.NgayKi;
+                hopDong_DTO.LanKi = item.LanKi;
+                hopDong_DTO.HeSoLuong = item.HeSoLuong;
+                hopDong_DTO.LuongCoBan = item.LuongCoBan;
                 hopDong_DTO.NoiDung = item.NoiDung;
                 hopDong_DTO.ID_NV = item.ID_NV;
                 hopDong_DTO.ThoiHan = item.ThoiHan;
                 var nv = db.tb_NhanVien.FirstOrDefault(n => n.ID_NV == item.ID_NV);
-                hopDong_DTO.TenNV = nv.Ten;
+                hopDong_DTO.TenNV = nv.TenNV;
                 var cv = db.tb_ChucVu.FirstOrDefault(c => c.ID_CV == nv.ID_CV);    
                 hopDong_DTO.TenCV = cv.TenCV;
                 hopDong_DTO.DienThoai = nv.DienThoai;
                 hopDong_DTO.DiaChi = nv.DiaChi;
                 hopDong_DTO.CCCD = nv.CCCD;
                 hopDong_DTO.Email = nv.Email;
-                hopDong_DTO.NgaySinh = nv.NgaySinh.ToString("dd/mm/yyyy");
+                hopDong_DTO.NgaySinh = nv.NgaySinh;
                 hopDong_DTO.Create_By = item.Create_By;
                 hopDong_DTO.Create_Time = item.Create_Time;
                 hopDong_DTO.Update_By = item.Update_By;
                 hopDong_DTO.Update_Time = item.Update_Time;
                 hopDong_DTO.Delete_By = item.Delete_By;
                 hopDong_DTO.Delete_Time = item.Delete_Time;
-                hopDong_DTO.ID_CT = item.ID_CT;
                 lstDTO.Add(hopDong_DTO);
             }
             return lstDTO;
@@ -66,28 +66,28 @@ namespace BusinessLayer
             {
                 hopDong_DTO = new HopDong_DTO();
                 hopDong_DTO.SoHD = item.SoHD;
-                hopDong_DTO.NgayBatDau = item.NgayBatDau.ToString("dd/mm/yyyy");
-                hopDong_DTO.NgayKetThuc = item.NgayKetThuc.ToString("dd/mm/yyyy");
-                hopDong_DTO.NgayKy = item.NgayKy.ToString("dd/mm/yyyy");
-                hopDong_DTO.LanKy = item.LanKy;
-                hopDong_DTO.LuongThoaThuan = item.LuongThoaThuan;
+                hopDong_DTO.NgayBatDau = item.NgayBatDau;
+                hopDong_DTO.NgayKetThuc = item.NgayKetThuc;
+                hopDong_DTO.NgayKi = item.NgayKi;
+                hopDong_DTO.LanKi = item.LanKi;
+                hopDong_DTO.HeSoLuong = item.HeSoLuong;
+                hopDong_DTO.LuongCoBan = item.LuongCoBan;
                 hopDong_DTO.NoiDung = item.NoiDung;
                 hopDong_DTO.ID_NV = item.ID_NV;
                 hopDong_DTO.ThoiHan = item.ThoiHan;
                 var nv = db.tb_NhanVien.FirstOrDefault(n=>n.ID_NV == item.ID_NV);
-                hopDong_DTO.TenNV = nv.Ten;
+                hopDong_DTO.TenNV = nv.TenNV;
                 hopDong_DTO.DienThoai = nv.DienThoai;
                 hopDong_DTO.DiaChi = nv.DiaChi;
                 hopDong_DTO.CCCD = nv.CCCD;
                 hopDong_DTO.Email = nv.Email;
-                hopDong_DTO.NgaySinh = nv.NgaySinh.ToString("dd/mm/yyyy");
+                hopDong_DTO.NgaySinh = nv.NgaySinh;
                 hopDong_DTO.Create_By = item.Create_By;
                 hopDong_DTO.Create_Time = item.Create_Time;
                 hopDong_DTO.Update_By = item.Update_By;
                 hopDong_DTO.Update_Time = item.Update_Time;
                 hopDong_DTO.Delete_By = item.Delete_By;
                 hopDong_DTO.Delete_Time = item.Delete_Time;
-                hopDong_DTO.ID_CT = item.ID_CT;
                 lstDTO.Add(hopDong_DTO);
             }
             return lstDTO;
@@ -103,28 +103,28 @@ namespace BusinessLayer
             {
                 hopDong_DTO = new HopDong_DTO();
                 hopDong_DTO.SoHD = item.SoHD;
-                hopDong_DTO.NgayBatDau = item.NgayBatDau.ToString("dd/mm/yyyy");
-                hopDong_DTO.NgayKetThuc = item.NgayKetThuc.ToString("dd/mm/yyyy");
-                hopDong_DTO.NgayKy = item.NgayKy.ToString("dd/mm/yyyy");
-                hopDong_DTO.LanKy = item.LanKy;
-                hopDong_DTO.LuongThoaThuan = item.LuongThoaThuan;
+                hopDong_DTO.NgayBatDau = item.NgayBatDau;
+                hopDong_DTO.NgayKetThuc = item.NgayKetThuc;
+                hopDong_DTO.NgayKi = item.NgayKi;
+                hopDong_DTO.LanKi = item.LanKi;
+                hopDong_DTO.HeSoLuong = item.HeSoLuong;
+                hopDong_DTO.LuongCoBan = item.LuongCoBan;
                 hopDong_DTO.NoiDung = item.NoiDung;
                 hopDong_DTO.ID_NV = item.ID_NV;
                 hopDong_DTO.ThoiHan = item.ThoiHan;
                 var nv = db.tb_NhanVien.FirstOrDefault(n => n.ID_NV == item.ID_NV);
-                hopDong_DTO.TenNV = nv.Ten;
+                hopDong_DTO.TenNV = nv.TenNV;
                 hopDong_DTO.DienThoai = nv.DienThoai;
                 hopDong_DTO.DiaChi = nv.DiaChi;
                 hopDong_DTO.CCCD = nv.CCCD;
                 hopDong_DTO.Email = nv.Email;
-                hopDong_DTO.NgaySinh = nv.NgaySinh.ToString("dd/mm/yyyy");
+                hopDong_DTO.NgaySinh = nv.NgaySinh;
                 hopDong_DTO.Create_By = item.Create_By;
                 hopDong_DTO.Create_Time = item.Create_Time;
                 hopDong_DTO.Update_By = item.Update_By;
                 hopDong_DTO.Update_Time = item.Update_Time;
                 hopDong_DTO.Delete_By = item.Delete_By;
                 hopDong_DTO.Delete_Time = item.Delete_Time;
-                hopDong_DTO.ID_CT = item.ID_CT;
                 lstDTO.Add(hopDong_DTO);
             }
             return lstDTO;
@@ -150,15 +150,14 @@ namespace BusinessLayer
                 var upd_hd = db.tb_HopDong.FirstOrDefault(x=>x.SoHD ==hd.SoHD);
                 upd_hd.NgayBatDau = hd.NgayBatDau;
                 upd_hd.NgayKetThuc = hd.NgayKetThuc;
-                upd_hd.NgayKy=hd.NgayKy;
-                upd_hd.LanKy=hd.LanKy;
-                upd_hd.LuongThoaThuan = hd.LuongThoaThuan;
+                upd_hd.NgayKi=hd.NgayKi;
+                upd_hd.LanKi=hd.LanKi;
+                upd_hd.HeSoLuong = hd.HeSoLuong;
+                upd_hd.LuongCoBan = hd.LuongCoBan;
                 upd_hd.ID_NV=hd.ID_NV;
-                upd_hd.LuongThoaThuan = hd.LuongThoaThuan;
                 upd_hd.NoiDung = hd.NoiDung;
                 upd_hd.ThoiHan = hd.ThoiHan;
                 upd_hd.SoHD = hd.SoHD;
-                upd_hd.ID_CT = hd.ID_CT;
                 upd_hd.Update_By = hd.Update_By;
                 upd_hd.Update_Time = hd.Update_Time;
                 db.SaveChanges();
@@ -171,7 +170,7 @@ namespace BusinessLayer
             }
         }
 
-        public void Delete(String soHD, int ID_NV)
+        public void Delete(String soHD, string ID_NV)
         {
             var del_hd = db.tb_HopDong.FirstOrDefault(x => x.SoHD == soHD);
             del_hd.Delete_By = ID_NV;

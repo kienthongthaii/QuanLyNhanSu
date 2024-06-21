@@ -49,7 +49,7 @@ namespace QLNhanSu
             cboPB_New.DisplayMember = "TenPB";
             
         }
-        void loadBPNEW(int x)
+        void loadBPNEW(string x)
         {
             cboBPNew.DataSource = _bophan.getlistWithPB(x);
             cboBPNew.ValueMember = "ID_BP";
@@ -89,14 +89,15 @@ namespace QLNhanSu
                 var soQDMAX = _nvdc.soQuyetDinhMAX();
                 int so = int.Parse(soQDMAX.Substring(0,5))+1;
                 dc.SoQD = so.ToString("00000")+@"/"+DateTime.Now.Year.ToString()+@"/QDĐC";
-                dc.Ngay = dtNgay.Value;
+                dc.NgayKi = dtNgay.Value;
+                dc.NgayApDung = dtNgay.Value;
                 dc.LiDo = txtLiDo.Text;
                 dc.GhiChu = txtGhiChu.Text;
-                dc.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
-                dc.ID_PB = _nhanvien.getItem(int.Parse(slkNhanVien.EditValue.ToString())).ID_PB;
-                dc.ID_PBNew = int.Parse(cboPB_New.SelectedValue.ToString());
-                dc.ID_BP = _nhanvien.getItem(int.Parse(slkNhanVien.EditValue.ToString())).ID_BP;
-                dc.ID_BPNew = int.Parse(cboBPNew.SelectedValue.ToString());
+                dc.ID_NV = slkNhanVien.EditValue.ToString();
+                dc.ID_PB = _nhanvien.getItem(slkNhanVien.EditValue.ToString()).ID_PB;
+                dc.ID_PBNew = cboPB_New.SelectedValue.ToString();
+                dc.ID_BP = _nhanvien.getItem(slkNhanVien.EditValue.ToString()).ID_BP;
+                dc.ID_BPNew = cboBPNew.SelectedValue.ToString();
                 dc.Create_By = 1;
                 dc.Create_Time = DateTime.Now;
                 _nvdc.Add(dc);
@@ -104,18 +105,19 @@ namespace QLNhanSu
             else
             {
                 dc = _nvdc.getItem(_soQD);
-                dc.Ngay = dtNgay.Value;
+                dc.NgayKi = dtNgay.Value;
+                dc.NgayApDung = dtNgay.Value;
                 dc.LiDo = txtLiDo.Text;
                 dc.GhiChu = txtGhiChu.Text;
-                dc.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
-                dc.ID_PBNew = int.Parse(cboPB_New.SelectedValue.ToString());
-                dc.ID_BPNew = int.Parse(cboBPNew.SelectedValue.ToString());
+                dc.ID_NV = slkNhanVien.EditValue.ToString();
+                dc.ID_PBNew = cboPB_New.SelectedValue.ToString();
+                dc.ID_BPNew = cboBPNew.SelectedValue.ToString();
                 dc.Update_By = 1;
                 dc.Update_Time = DateTime.Now;
                 _nvdc.Update(dc);
             }
-            var nv = _nhanvien.getItem(dc.ID_NV.Value);
-            nv.ID_PB = (int)dc.ID_PBNew;
+            var nv = _nhanvien.getItem(dc.ID_NV);
+            nv.ID_PB = dc.ID_PBNew;
             _nhanvien.Update(nv);
         }
 
@@ -213,7 +215,8 @@ namespace QLNhanSu
                 _soQD = gvDanhSach.GetFocusedRowCellValue("SoQD").ToString();
                 var dc = _nvdc.getItem(_soQD);
                 txtSoQD.Text = _soQD;
-                dtNgay.Value = dc.Ngay.Value;
+                dtNgay.Value = dc.NgayKi;
+                dtNgay.Value = dc.NgayApDung;
                 slkNhanVien.EditValue = dc.ID_NV;
                 txtGhiChu.Text = dc.GhiChu;
                 txtLiDo.Text = dc.LiDo;
@@ -238,7 +241,7 @@ namespace QLNhanSu
         {
             if (flag)
             {
-                loadBPNEW(int.Parse(cboPB_New.SelectedValue.ToString()));
+                loadBPNEW(cboPB_New.SelectedValue.ToString());
             }
         }
 

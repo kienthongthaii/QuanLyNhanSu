@@ -10,10 +10,10 @@ namespace BusinessLayer
 {
     public class KhenThuong_KyLuat
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
         public tb_KhenThuongKyLuat getItem(string id)
         {
-            return db.tb_KhenThuongKyLuat.FirstOrDefault(x => x.SoQuyetDinh == id);
+            return db.tb_KhenThuongKyLuat.FirstOrDefault(x => x.SoQD == id);
 
         }
         public List<tb_KhenThuongKyLuat> getlist(int loai)
@@ -29,16 +29,16 @@ namespace BusinessLayer
             foreach (var item in lstKT)
             {
                 kt = new KhenThuongKyLuat_DTO();
-                kt.SoQuyetDinh = item.SoQuyetDinh;
-                kt.Ngay = item.Ngay;
+                kt.SoQD = item.SoQD;
+                kt.NgayKi = item.NgayKi;
                 kt.TuNgay = item.TuNgay;
                 kt.DenNgay = item.DenNgay;
                 kt.NoiDung = item.NoiDung;
-                kt.LyDo = item.LyDo;
+                kt.LiDo = item.LiDo;
                 kt.ID_NV = item.ID_NV;
 
                 var nv = db.tb_NhanVien.FirstOrDefault(x => x.ID_NV==item.ID_NV);
-                kt.Ten = nv.Ten;
+                kt.TenNV = nv.TenNV;
                 kt.Create_By = item.Create_By;
                 kt.Create_Time = item.Create_Time;
                 kt.Update_By = item.Update_By;
@@ -68,11 +68,11 @@ namespace BusinessLayer
         {
             try
             {
-                var upd_ktkl = db.tb_KhenThuongKyLuat.FirstOrDefault(x => x.SoQuyetDinh == ktkl.SoQuyetDinh);
-                upd_ktkl.Ngay = ktkl.Ngay;
+                var upd_ktkl = db.tb_KhenThuongKyLuat.FirstOrDefault(x => x.SoQD == ktkl.SoQD);
+                upd_ktkl.NgayKi = ktkl.NgayKi;
                 upd_ktkl.TuNgay = ktkl.TuNgay;
                 upd_ktkl.DenNgay = ktkl.DenNgay;
-                upd_ktkl.LyDo = ktkl.LyDo;
+                upd_ktkl.LiDo = ktkl.LiDo;
                 upd_ktkl.NoiDung = ktkl.NoiDung;
                 upd_ktkl.Loai = ktkl.Loai;
                 upd_ktkl.Update_By = ktkl.Update_By;
@@ -85,11 +85,11 @@ namespace BusinessLayer
                 throw new Exception("Lỗi : " + ex.Message);
             }
         }
-        public void Delete(string soQD, int ID_NV)
+        public void Delete(string soQD, string ID_NV)
         {
             try
             {
-                var del_ktkl = db.tb_KhenThuongKyLuat.FirstOrDefault(x => x.SoQuyetDinh == soQD);
+                var del_ktkl = db.tb_KhenThuongKyLuat.FirstOrDefault(x => x.SoQD == soQD);
                 del_ktkl.Delete_By = ID_NV;
                 del_ktkl.Delete_Time = DateTime.Now;
                 db.SaveChanges();
@@ -100,12 +100,12 @@ namespace BusinessLayer
             }
         }
 
-        public string soQuyetDinhMAX(int loai)
+        public string SoQDMAX(int loai)
         {
             var _qd = db.tb_KhenThuongKyLuat.Where(x=>x.Loai==loai).OrderByDescending(x => x.Create_Time).FirstOrDefault();
             if (_qd != null)
             {
-                return _qd.SoQuyetDinh;
+                return _qd.SoQD;
             }
             else
             {

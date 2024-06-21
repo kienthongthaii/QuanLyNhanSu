@@ -9,17 +9,20 @@ namespace BusinessLayer.DTO
     public class DieuChuyen_DTO
     {
         public string SoQD { get; set; }
-        public Nullable<System.DateTime> Ngay { get; set; }
-        public Nullable<int> ID_NV { get; set; }
-        public string Ten { get; set; }
-        public Nullable<int> ID_PB { get; set; }
+        public System.DateTime NgayApDung { get; set; }
+        public System.DateTime NgayKi { get; set; }
+        public string ID_NV { get; set; }
+        public string TenNV { get; set; }
+        public string ID_NV_Duyet { get; set; }
+        public string TenNV_Duyet { get; set; }
+        public string ID_PB { get; set; }
         public string TenPB { get; set; }
-        public Nullable<int> ID_BP { get; set; }
+        public string ID_BP { get; set; }
         public string TenBP { get; set; }
-        public Nullable<int> ID_PBNew { get; set; }
-        public string TenPBNEW { get; set; }
-        public Nullable<int> ID_BPNew { get; set; }
-        public string TenBPNEW { get; set; }
+        public string ID_PBNew { get; set; }
+        public string TenPBNew { get; set; }
+        public string ID_BPNew { get; set; }
+        public string TenBPNew { get; set; }
         public string LiDo { get; set; }
         public string GhiChu { get; set; }
         public Nullable<int> Create_By { get; set; }

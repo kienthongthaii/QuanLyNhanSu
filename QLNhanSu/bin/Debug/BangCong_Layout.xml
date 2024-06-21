@@ -1,0 +1,1398 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="#LayoutScaleFactor">@1,Width=1@1,Height=1</property>
+  <property name="Appearance" isnull="true" iskey="true">
+    <property name="FocusedCell" iskey="true" value="FocusedCell">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseBackColor">true</property>
+        <property name="UseFont">true</property>
+      </property>
+      <property name="BackColor">Khaki</property>
+      <property name="Font">Tahoma, 8.25pt, style=Bold, Italic, Underline</property>
+    </property>
+    <property name="FocusedRow" iskey="true" value="FocusedRow">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseBackColor">true</property>
+        <property name="UseFont">true</property>
+      </property>
+      <property name="BackColor">GreenYellow</property>
+      <property name="Font">Tahoma, 8.25pt, style=Bold</property>
+    </property>
+    <property name="Row" iskey="true" value="Row">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseFont">true</property>
+      </property>
+      <property name="Font">Tahoma, 9pt</property>
+    </property>
+    <property name="HeaderPanel" iskey="true" value="HeaderPanel">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseTextOptions">true</property>
+        <property name="UseFont">true</property>
+      </property>
+      <property name="TextOptions" isnull="true" iskey="true">
+        <property name="WordWrap">Wrap</property>
+        <property name="HAlignment">Center</property>
+      </property>
+      <property name="Font">Tahoma, 10pt, style=Bold</property>
+    </property>
+  </property>
+  <property name="Columns" iskey="true" value="39">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="VisibleIndex">0</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colMaNV</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowEdit">false</property>
+        <property name="AllowFocus">false</property>
+      </property>
+      <property name="Caption">ID</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">ID_NV</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">146</property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="VisibleIndex">1</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colHoTen</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowEdit">false</property>
+        <property name="AllowFocus">false</property>
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="Caption">HỌ VÀ TÊN</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">HoTen</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="VisibleIndex">2</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD1</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D1</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="VisibleIndex">3</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD2</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D2</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="VisibleIndex">4</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD3</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D3</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="VisibleIndex">5</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD4</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D4</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="VisibleIndex">6</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD5</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D5</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="VisibleIndex">7</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD6</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D6</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="VisibleIndex">8</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD7</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D7</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="VisibleIndex">9</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD8</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D8</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="VisibleIndex">10</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD9</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D9</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="VisibleIndex">11</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD10</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D10</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="VisibleIndex">12</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD11</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D11</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="VisibleIndex">13</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD12</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D12</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="VisibleIndex">14</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD13</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D13</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="VisibleIndex">15</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD14</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D14</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="VisibleIndex">16</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD15</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D15</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="VisibleIndex">17</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD16</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D16</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="VisibleIndex">18</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD17</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D17</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="VisibleIndex">19</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD18</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D18</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="VisibleIndex">20</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD19</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D19</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="VisibleIndex">21</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD20</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D20</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="VisibleIndex">22</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD21</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D21</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="VisibleIndex">23</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD22</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D22</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="VisibleIndex">24</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD23</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D23</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="VisibleIndex">25</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD24</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D24</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="VisibleIndex">26</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD25</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D25</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="VisibleIndex">27</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD26</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D26</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="VisibleIndex">28</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD27</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D27</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="VisibleIndex">29</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD28</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D28</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="VisibleIndex">30</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD29</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D29</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="VisibleIndex">31</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD30</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D30</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="VisibleIndex">32</property>
+      <property name="Fixed">None</property>
+      <property name="Name">colD31</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">D31</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="WordWrap">Wrap</property>
+          <property name="HAlignment">Center</property>
+          <property name="VAlignment">Center</property>
+        </property>
+      </property>
+      <property name="MinWidth">20</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="VisibleIndex">33</property>
+      <property name="Fixed">None</property>
+      <property name="Name">NgayCong</property>
+      <property name="Caption">NGÀY CÔNG</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">NgayCong</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseFont">true</property>
+        </property>
+        <property name="Font">Tahoma, 7.8pt, style=Bold</property>
+      </property>
+      <property name="MinWidth">100</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item35" isnull="true" iskey="true">
+      <property name="VisibleIndex">34</property>
+      <property name="Fixed">None</property>
+      <property name="Name">NghiKhongPhep</property>
+      <property name="Caption">KHÔNG PHÉP</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">NghiKhongPhep</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseFont">true</property>
+        </property>
+        <property name="Font">Tahoma, 7.8pt, style=Bold</property>
+      </property>
+      <property name="MinWidth">100</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item36" isnull="true" iskey="true">
+      <property name="VisibleIndex">35</property>
+      <property name="Fixed">None</property>
+      <property name="Name">NgayPhep</property>
+      <property name="Caption">NGÀY PHÉP</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">NgayPhep</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseFont">true</property>
+        </property>
+        <property name="Font">Tahoma, 7.8pt, style=Bold</property>
+      </property>
+      <property name="MinWidth">100</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item37" isnull="true" iskey="true">
+      <property name="VisibleIndex">36</property>
+      <property name="Fixed">None</property>
+      <property name="Name">CongNgayLe</property>
+      <property name="Caption">CÔNG LỄ</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">CongNgayLe</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseFont">true</property>
+        </property>
+        <property name="Font">Tahoma, 7.8pt, style=Bold</property>
+      </property>
+      <property name="MinWidth">100</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item38" isnull="true" iskey="true">
+      <property name="VisibleIndex">37</property>
+      <property name="Fixed">None</property>
+      <property name="Name">CongChuNhat</property>
+      <property name="Caption">CÔNG CN</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">CongChuNhat</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseFont">true</property>
+        </property>
+        <property name="Font">Tahoma, 7.8pt, style=Bold</property>
+      </property>
+      <property name="MinWidth">100</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+    <property name="Item39" isnull="true" iskey="true">
+      <property name="VisibleIndex">38</property>
+      <property name="Fixed">None</property>
+      <property name="Name">TongNgayCong</property>
+      <property name="Caption">TỔNG NGÀY CÔNG</property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="FieldName">TongNgayCong</property>
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Width">140</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseFont">true</property>
+        </property>
+        <property name="Font">Tahoma, 7.8pt, style=Bold</property>
+      </property>
+      <property name="MinWidth">140</property>
+      <property name="UnboundDataTypeName" />
+    </property>
+  </property>
+  <property name="MinBandPanelRowCount">1</property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ColumnAutoWidth">false</property>
+    <property name="ShowGroupPanel">false</property>
+    <property name="ShowIndicator">false</property>
+    <property name="ShowFilterPanelMode">Never</property>
+  </property>
+  <property name="OptionsCustomization" isnull="true" iskey="true">
+    <property name="AllowFilter">false</property>
+    <property name="AllowGroup">false</property>
+    <property name="AllowSort">false</property>
+  </property>
+  <property name="BandPanelRowHeight">-1</property>
+  <property name="OptionsDetail" isnull="true" iskey="true">
+    <property name="EnableMasterViewMode">false</property>
+  </property>
+  <property name="OptionsFind" isnull="true" iskey="true">
+    <property name="AlwaysVisible">true</property>
+    <property name="FindNullPrompt">Nhập nội dung cần tìm</property>
+  </property>
+  <property name="OptionsMenu" isnull="true" iskey="true">
+    <property name="EnableColumnMenu">false</property>
+  </property>
+  <property name="FixedLineWidth">2</property>
+  <property name="IndicatorWidth">40</property>
+  <property name="ColumnPanelRowHeight">60</property>
+  <property name="RowSeparatorHeight">0</property>
+  <property name="FooterPanelHeight">-1</property>
+  <property name="HorzScrollVisibility">Always</property>
+  <property name="VertScrollVisibility">Always</property>
+  <property name="RowHeight">28</property>
+  <property name="GroupRowHeight">-1</property>
+  <property name="GroupFormat">{0}: [#image]{1} {2}</property>
+  <property name="ChildGridLevelName" />
+  <property name="VertScrollTipFieldName" />
+  <property name="PreviewFieldName" />
+  <property name="GroupPanelText" />
+  <property name="NewItemRowText" />
+  <property name="LevelIndent">-1</property>
+  <property name="PreviewIndent">-1</property>
+  <property name="PreviewLineCount">-1</property>
+  <property name="ScrollStyle">LiveVertScroll, LiveHorzScroll</property>
+  <property name="FocusRectStyle">RowFocus</property>
+  <property name="HorzScrollStep">0</property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="ViewCaptionHeight">-1</property>
+  <property name="ViewCaption" />
+  <property name="BorderStyle">Default</property>
+  <property name="SynchronizeClones">true</property>
+  <property name="DetailTabHeaderLocation">Top</property>
+  <property name="Name">gvBangCongChiTiet</property>
+  <property name="DetailHeight">431</property>
+  <property name="Tag" isnull="true" />
+  <property name="Bands" iskey="true" value="2">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseForeColor">true</property>
+          <property name="UseBackColor">true</property>
+          <property name="UseFont">true</property>
+        </property>
+        <property name="ForeColor">Black</property>
+        <property name="BackColor">192, 255, 255</property>
+        <property name="Font">Tahoma, 10pt, style=Bold</property>
+        <property name="FontStyleDelta">Bold</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="Fixed">Left</property>
+      <property name="Width">346</property>
+      <property name="MinWidth">10</property>
+      <property name="Columns" iskey="true" value="2">
+        <property name="Item1">colMaNV</property>
+        <property name="Item2">colHoTen</property>
+      </property>
+      <property name="RowCount">2</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Caption">THÔNG TIN NHÂN VIÊN</property>
+      <property name="Name">ThongTinNhanVien</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseBackColor">true</property>
+          <property name="UseFont">true</property>
+        </property>
+        <property name="BackColor">224, 224, 224</property>
+        <property name="Font">Tahoma, 10pt, style=Bold</property>
+        <property name="FontStyleDelta">Bold</property>
+      </property>
+      <property name="ImageAlignment">Near</property>
+      <property name="ImageIndex">-1</property>
+      <property name="Width">2810</property>
+      <property name="MinWidth">10</property>
+      <property name="Columns" iskey="true" value="37">
+        <property name="Item1">colD1</property>
+        <property name="Item2">colD2</property>
+        <property name="Item3">colD3</property>
+        <property name="Item4">colD4</property>
+        <property name="Item5">colD5</property>
+        <property name="Item6">colD6</property>
+        <property name="Item7">colD7</property>
+        <property name="Item8">colD8</property>
+        <property name="Item9">colD9</property>
+        <property name="Item10">colD10</property>
+        <property name="Item11">colD11</property>
+        <property name="Item12">colD12</property>
+        <property name="Item13">colD13</property>
+        <property name="Item14">colD14</property>
+        <property name="Item15">colD15</property>
+        <property name="Item16">colD16</property>
+        <property name="Item17">colD17</property>
+        <property name="Item18">colD18</property>
+        <property name="Item19">colD19</property>
+        <property name="Item20">colD20</property>
+        <property name="Item21">colD21</property>
+        <property name="Item22">colD22</property>
+        <property name="Item23">colD23</property>
+        <property name="Item24">colD24</property>
+        <property name="Item25">colD25</property>
+        <property name="Item26">colD26</property>
+        <property name="Item27">colD27</property>
+        <property name="Item28">colD28</property>
+        <property name="Item29">colD29</property>
+        <property name="Item30">colD30</property>
+        <property name="Item31">colD31</property>
+        <property name="Item32">NgayCong</property>
+        <property name="Item33">NghiKhongPhep</property>
+        <property name="Item34">NgayPhep</property>
+        <property name="Item35">CongNgayLe</property>
+        <property name="Item36">CongChuNhat</property>
+        <property name="Item37">TongNgayCong</property>
+      </property>
+      <property name="RowCount">2</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Caption">THÔNG TIN CHẤM CÔNG</property>
+      <property name="Name">ThongTinChamCong</property>
+    </property>
+  </property>
+  <property name="GroupSummary" iskey="true" value="0" />
+  <property name="ActiveFilterString" />
+  <property name="FormatRules" iskey="true" value="0" />
+  <property name="FormatConditions" iskey="true" value="0" />
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

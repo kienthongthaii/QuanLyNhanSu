@@ -9,8 +9,8 @@ namespace BusinessLayer
 {
     public class TrinhDo
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
-        public tb_TrinhDo getItem(int id)
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
+        public tb_TrinhDo getItem(string id)
         {
             return db.tb_TrinhDo.FirstOrDefault(x => x.ID_TD == id);
 
@@ -47,7 +47,7 @@ namespace BusinessLayer
                 throw new Exception("Lỗi : " + ex.Message);
             }
         }
-        public void Delete(int id)
+        public void Delete(string id)
         {
             try
             {

@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,11 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL_Funcions.cs" />
+    <Compile Include="CHAMCONG_BL\BangCong_NV_CT.cs" />
+    <Compile Include="CHAMCONG_BL\KyCong.cs" />
+    <Compile Include="CHAMCONG_BL\KyCongChiTiet.cs" />
+    <Compile Include="DTO\ChucVu_DTO.cs" />
+    <Compile Include="DTO\NhanVien_PhuCap_DTO.cs" />
+    <Compile Include="DTO\TangCa_DTO.cs" />
+    <Compile Include="DTO\UngLuong_DTO.cs" />
+    <Compile Include="HETHONG_BL\NhanVien_ChamCong.cs" />
+    <Compile Include="HETHONG_BL\TaiKhoan.cs" />
     <Compile Include="NHANSU_BL\BoPhan.cs" />
-    <Compile Include="CHAMCONG_BL\LoaiCa.cs" />
-    <Compile Include="CHAMCONG_BL\LoaiCong.cs" />
     <Compile Include="NHANSU_BL\ChucVu.cs" />
-    <Compile Include="NHANSU_BL\CongTy.cs" />
     <Compile Include="NHANSU_BL\DanToc.cs" />
     <Compile Include="NHANSU_BL\ThangTien.cs" />
     <Compile Include="DTO\BoPhan_DTO.cs" />
@@ -72,6 +80,10 @@
     <Compile Include="NHANSU_BL\ThoiViec.cs" />
     <Compile Include="NHANSU_BL\TonGiao.cs" />
     <Compile Include="NHANSU_BL\TrinhDo.cs" />
+    <Compile Include="TINHLUONG_BL\BangLuong.cs" />
+    <Compile Include="TINHLUONG_BL\PhuCap.cs" />
+    <Compile Include="TINHLUONG_BL\TangCa.cs" />
+    <Compile Include="TINHLUONG_BL\UngLuong.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">

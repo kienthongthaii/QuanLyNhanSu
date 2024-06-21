@@ -13,10 +13,10 @@ namespace DataLayer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLNS_CELLPHONES_Entities : DbContext
+    public partial class QuanLyNhanSu_MasterEntities : DbContext
     {
-        public QLNS_CELLPHONES_Entities()
-            : base("name=QLNS_CELLPHONES_Entities")
+        public QuanLyNhanSu_MasterEntities()
+            : base("name=QuanLyNhanSu_MasterEntities")
         {
         }
     
@@ -25,27 +25,28 @@ namespace DataLayer
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tb_BangCong> tb_BangCong { get; set; }
+        public virtual DbSet<tb_BangLuong> tb_BangLuong { get; set; }
         public virtual DbSet<tb_BaoHiem> tb_BaoHiem { get; set; }
         public virtual DbSet<tb_BoPhan> tb_BoPhan { get; set; }
-        public virtual DbSet<tb_CongTy> tb_CongTy { get; set; }
         public virtual DbSet<tb_ChucVu> tb_ChucVu { get; set; }
         public virtual DbSet<tb_ChungChi> tb_ChungChi { get; set; }
         public virtual DbSet<tb_DanToc> tb_DanToc { get; set; }
         public virtual DbSet<tb_DieuChuyen> tb_DieuChuyen { get; set; }
         public virtual DbSet<tb_HopDong> tb_HopDong { get; set; }
+        public virtual DbSet<tb_KyCong> tb_KyCong { get; set; }
+        public virtual DbSet<tb_KyCongChiTiet> tb_KyCongChiTiet { get; set; }
         public virtual DbSet<tb_KhenThuongKyLuat> tb_KhenThuongKyLuat { get; set; }
         public virtual DbSet<tb_NhanVien> tb_NhanVien { get; set; }
         public virtual DbSet<tb_NhanVien_PhuCap> tb_NhanVien_PhuCap { get; set; }
         public virtual DbSet<tb_PhongBan> tb_PhongBan { get; set; }
         public virtual DbSet<tb_PhuCap> tb_PhuCap { get; set; }
+        public virtual DbSet<tb_SYS_User> tb_SYS_User { get; set; }
         public virtual DbSet<tb_TangCa> tb_TangCa { get; set; }
         public virtual DbSet<tb_TonGiao> tb_TonGiao { get; set; }
         public virtual DbSet<tb_ThangTien> tb_ThangTien { get; set; }
         public virtual DbSet<tb_ThoiViec> tb_ThoiViec { get; set; }
         public virtual DbSet<tb_TrinhDo> tb_TrinhDo { get; set; }
         public virtual DbSet<tb_UngLuong> tb_UngLuong { get; set; }
-        public virtual DbSet<tb_LoaiCa> tb_LoaiCa { get; set; }
-        public virtual DbSet<tb_LoaiCong> tb_LoaiCong { get; set; }
+        public virtual DbSet<tb_BangCong_NV_CT> tb_BangCong_NV_CT { get; set; }
     }
 }

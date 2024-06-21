@@ -21,7 +21,7 @@ namespace QLNhanSu
         }
         TonGiao _tongiao;
         bool _add;
-        int _id;
+        string _id;
         bool _click;
         //Ẩn hiện các nút
         void showHide(bool check)
@@ -130,7 +130,7 @@ namespace QLNhanSu
         private void gvDanhSach_Click(object sender, EventArgs e)
         {
             _click = true;
-            _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_TG").ToString());
+            _id = gvDanhSach.GetFocusedRowCellValue("ID_TG").ToString();
             txtTenTG.Text = gvDanhSach.GetFocusedRowCellValue("TenTG").ToString();
         }
     }

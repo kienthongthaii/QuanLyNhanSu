@@ -15,8 +15,12 @@ namespace DataLayer
     public partial class tb_ThoiViec
     {
         public string SoQD { get; set; }
-        public Nullable<System.DateTime> NgayNopDon { get; set; }
-        public Nullable<System.DateTime> NgayThoiViec { get; set; }
+        public string ID_NV { get; set; }
+        public string ID_NV_Duyet { get; set; }
+        public System.DateTime NgayKi { get; set; }
+        public System.DateTime NgayNopDon { get; set; }
+        public System.DateTime NgayThoiViec { get; set; }
+        public string TrangThai { get; set; }
         public string LyDo { get; set; }
         public string GhiChu { get; set; }
         public Nullable<int> Create_By { get; set; }
@@ -25,7 +29,6 @@ namespace DataLayer
         public Nullable<System.DateTime> Update_Time { get; set; }
         public Nullable<int> Delete_By { get; set; }
         public Nullable<System.DateTime> Delete_Time { get; set; }
-        public int ID_NV { get; set; }
     
         public virtual tb_NhanVien tb_NhanVien { get; set; }
     }

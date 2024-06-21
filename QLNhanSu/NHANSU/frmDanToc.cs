@@ -22,7 +22,7 @@ namespace QLNhanSu
         }
         DanToc _dantoc;
         bool _add;
-        int _id;
+        string _id;
         bool _click;
         private void frmDanToc_Load(object sender, EventArgs e)
         {
@@ -135,7 +135,7 @@ namespace QLNhanSu
         private void gvDanhSach_Click(object sender, EventArgs e)
         {
             _click = true;
-            _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_DT").ToString());
+            _id = gvDanhSach.GetFocusedRowCellValue("ID_DT").ToString();
             txtTenDT.Text = gvDanhSach.GetFocusedRowCellValue("TenDT").ToString(); 
         }
     }

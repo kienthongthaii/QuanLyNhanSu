@@ -1,18 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Code_UFM\\QLNS_CellPhoneS\\",
+  "WorkspaceRootPath": "D:\\Code_UFM\\QLNS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0F4E30D-3EF4-4680-A331-5A1BFDD11847}|DataLayer\\DataLayer.csproj|d:\\code_ufm\\qlns_cellphones\\datalayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B0F4E30D-3EF4-4680-A331-5A1BFDD11847}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|d:\\code_ufm\\qlns\\businesslayer\\nhansu_bl\\chucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\nhansu_bl\\chucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|D:\\Code_UFM\\QLNS_CellPhoneS\\qlnhansu\\chamcong\\frmloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\chamcong\\frmloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|d:\\code_ufm\\qlns\\qlnhansu\\nhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\nhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|D:\\Code_UFM\\QLNS_CellPhoneS\\qlnhansu\\chamcong\\frmloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\chamcong\\frmloaicong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|d:\\code_ufm\\qlns\\businesslayer\\dto\\chucvu_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\dto\\chucvu_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|d:\\code_ufm\\qlns\\qlnhansu\\nhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\nhansu\\frmchucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|d:\\code_ufm\\qlns\\qlnhansu\\nhansu\\frmphongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{379CF68A-EB79-4787-B5B6-B9581CCDF1D5}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\nhansu\\frmphongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|d:\\code_ufm\\qlns\\businesslayer\\dto\\phongban_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\dto\\phongban_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|d:\\code_ufm\\qlns\\businesslayer\\nhansu_bl\\phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4C0F2D-3469-44DD-BE1C-FE997A956939}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\nhansu_bl\\phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0F4E30D-3EF4-4680-A331-5A1BFDD11847}|DataLayer\\DataLayer.csproj|d:\\code_ufm\\qlns\\datalayer\\tb_chucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0F4E30D-3EF4-4680-A331-5A1BFDD11847}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\tb_chucvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,39 +58,106 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChucVu_DTO.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\BusinessLayer\\DTO\\ChucVu_DTO.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\DTO\\ChucVu_DTO.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\BusinessLayer\\DTO\\ChucVu_DTO.cs",
+              "RelativeToolTip": "BusinessLayer\\DTO\\ChucVu_DTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:10:48.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.Config",
-              "DocumentMoniker": "D:\\Code_UFM\\QLNS_CellPhoneS\\DataLayer\\App.Config",
-              "RelativeDocumentMoniker": "DataLayer\\App.Config",
-              "ToolTip": "D:\\Code_UFM\\QLNS_CellPhoneS\\DataLayer\\App.Config",
-              "RelativeToolTip": "DataLayer\\App.Config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-04T14:19:29.554Z",
+              "Title": "ChucVu.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\BusinessLayer\\NHANSU_BL\\ChucVu.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\NHANSU_BL\\ChucVu.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\BusinessLayer\\NHANSU_BL\\ChucVu.cs",
+              "RelativeToolTip": "BusinessLayer\\NHANSU_BL\\ChucVu.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA8wCMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:03:43.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmLoaiCong.cs",
-              "DocumentMoniker": "D:\\Code_UFM\\QLNS_CellPhoneS\\QLNhanSu\\CHAMCONG\\frmLoaiCong.cs",
-              "RelativeDocumentMoniker": "QLNhanSu\\CHAMCONG\\frmLoaiCong.cs",
-              "ToolTip": "D:\\Code_UFM\\QLNS_CellPhoneS\\QLNhanSu\\CHAMCONG\\frmLoaiCong.cs",
-              "RelativeToolTip": "QLNhanSu\\CHAMCONG\\frmLoaiCong.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAhwIwAAAAZAAAA",
+              "Title": "frmChucVu.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\QLNhanSu\\NHANSU\\frmChucVu.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\NHANSU\\frmChucVu.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\QLNhanSu\\NHANSU\\frmChucVu.cs",
+              "RelativeToolTip": "QLNhanSu\\NHANSU\\frmChucVu.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAASwCkAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:14:10.058Z"
+              "WhenOpened": "2024-06-20T12:02:40.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmLoaiCong.cs [Design]",
-              "DocumentMoniker": "D:\\Code_UFM\\QLNS_CellPhoneS\\QLNhanSu\\CHAMCONG\\frmLoaiCong.cs",
-              "RelativeDocumentMoniker": "QLNhanSu\\CHAMCONG\\frmLoaiCong.cs",
-              "ToolTip": "D:\\Code_UFM\\QLNS_CellPhoneS\\QLNhanSu\\CHAMCONG\\frmLoaiCong.cs [Design]",
-              "RelativeToolTip": "QLNhanSu\\CHAMCONG\\frmLoaiCong.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "frmChucVu.cs [Design]",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\QLNhanSu\\NHANSU\\frmChucVu.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\NHANSU\\frmChucVu.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\QLNhanSu\\NHANSU\\frmChucVu.cs [Design]",
+              "RelativeToolTip": "QLNhanSu\\NHANSU\\frmChucVu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:14:08.227Z"
+              "WhenOpened": "2024-06-20T11:59:16.449Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmPhongBan.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\QLNhanSu\\NHANSU\\frmPhongBan.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\NHANSU\\frmPhongBan.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\QLNhanSu\\NHANSU\\frmPhongBan.cs",
+              "RelativeToolTip": "QLNhanSu\\NHANSU\\frmPhongBan.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAQwJMAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:25:34.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "tb_ChucVu.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\DataLayer\\tb_ChucVu.cs",
+              "RelativeDocumentMoniker": "DataLayer\\tb_ChucVu.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\DataLayer\\tb_ChucVu.cs",
+              "RelativeToolTip": "DataLayer\\tb_ChucVu.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwB4AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:11:04.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PhongBan_DTO.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\BusinessLayer\\DTO\\PhongBan_DTO.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\DTO\\PhongBan_DTO.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\BusinessLayer\\DTO\\PhongBan_DTO.cs",
+              "RelativeToolTip": "BusinessLayer\\DTO\\PhongBan_DTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:45:47.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PhongBan.cs",
+              "DocumentMoniker": "D:\\Code_UFM\\QLNS\\BusinessLayer\\NHANSU_BL\\PhongBan.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\NHANSU_BL\\PhongBan.cs",
+              "ToolTip": "D:\\Code_UFM\\QLNS\\BusinessLayer\\NHANSU_BL\\PhongBan.cs",
+              "RelativeToolTip": "BusinessLayer\\NHANSU_BL\\PhongBan.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAkwDkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:32:02.567Z",
+              "EditorCaption": ""
             }
           ]
         }

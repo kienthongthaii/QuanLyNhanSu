@@ -14,16 +14,22 @@ namespace DataLayer
     
     public partial class tb_ChungChi
     {
-        public int ID_CC { get; set; }
+        public string ID_CC { get; set; }
         public string TenCC { get; set; }
         public string Loai { get; set; }
         public string Diem { get; set; }
         public string DonViCap { get; set; }
-        public Nullable<System.DateTime> NgayCap { get; set; }
-        public string ThoiHan { get; set; }
+        public System.DateTime NgayCap { get; set; }
+        public System.DateTime ThoiHan { get; set; }
         public string GhiChu { get; set; }
-        public Nullable<bool> ConHan { get; set; }
-        public Nullable<int> ID_NV { get; set; }
+        public bool ConHan { get; set; }
+        public string ID_NV { get; set; }
+        public string Create_By { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     
         public virtual tb_NhanVien tb_NhanVien { get; set; }
     }

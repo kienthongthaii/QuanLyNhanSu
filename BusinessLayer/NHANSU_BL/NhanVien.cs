@@ -10,11 +10,53 @@ namespace BusinessLayer
 {
     public class NhanVien
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
-        public tb_NhanVien getItem(int id)
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
+        public tb_NhanVien getItem(string id)
         {
             return db.tb_NhanVien.FirstOrDefault(x => x.ID_NV == id);
 
+        }
+        public NhanVien_DTO getItemFull(string ID)
+        {
+            var item = db.tb_NhanVien.FirstOrDefault(x=>x.ID_NV==ID);
+            NhanVien_DTO nvDTO = new NhanVien_DTO();
+                nvDTO.ID_NV = item.ID_NV;
+                nvDTO.TenNV = item.TenNV;
+                nvDTO.GioiTinh = item.GioiTinh;
+                nvDTO.NgaySinh = item.NgaySinh;
+                nvDTO.NgayLam = item.NgayLam;
+                nvDTO.DienThoai = item.DienThoai;
+                nvDTO.Email = item.Email;
+                nvDTO.DiaChi = item.DiaChi;
+                nvDTO.CCCD = item.CCCD;
+                nvDTO.Anh = item.Anh;
+                nvDTO.DaThoiViec = item.DaThoiViec;
+
+                nvDTO.ID_PB = item.ID_PB;
+                var pb = db.tb_PhongBan.FirstOrDefault(b => b.ID_PB == item.ID_PB);
+                nvDTO.TenPB = pb.TenPB;
+
+                nvDTO.ID_CV = item.ID_CV;
+                var cv = db.tb_ChucVu.FirstOrDefault(b => b.ID_CV == item.ID_CV);
+                nvDTO.TenCV = cv.TenCV;
+
+                nvDTO.ID_BP = item.ID_BP;
+                var bp = db.tb_BoPhan.FirstOrDefault(b => b.ID_BP == item.ID_BP);
+                nvDTO.TenBP = bp.TenBP;
+
+                nvDTO.ID_TD = item.ID_TD;
+                var td = db.tb_TrinhDo.FirstOrDefault(b => b.ID_TD == item.ID_TD);
+                nvDTO.TenTD = td.TenTD;
+
+                nvDTO.ID_DT = item.ID_DT;
+                var dt = db.tb_DanToc.FirstOrDefault(b => b.ID_DT == item.ID_DT);
+                nvDTO.TenDT = dt.TenDT;
+
+                nvDTO.ID_TG = item.ID_TG;
+                var tg = db.tb_TonGiao.FirstOrDefault(b => b.ID_TG == item.ID_TG);
+                nvDTO.TenTG = tg.TenTG;
+
+            return nvDTO;
         }
         public List<tb_NhanVien> getlist()
         {
@@ -30,7 +72,7 @@ namespace BusinessLayer
             {
                 nvDTO = new NhanVien_DTO();
                 nvDTO.ID_NV = item.ID_NV;
-                nvDTO.Ten = item.Ten;
+                nvDTO.TenNV = item.TenNV;
                 nvDTO.GioiTinh = item.GioiTinh;
                 nvDTO.NgaySinh = item.NgaySinh;
                 nvDTO.NgayLam = item.NgayLam;
@@ -89,7 +131,7 @@ namespace BusinessLayer
             try
             {
                 var upd_nv = db.tb_NhanVien.FirstOrDefault(x => x.ID_NV == nv.ID_NV);
-                upd_nv.Ten = nv.Ten;
+                upd_nv.TenNV = nv.TenNV;
                 upd_nv.GioiTinh = nv.GioiTinh;
                 upd_nv.NgaySinh = nv.NgaySinh;
                 upd_nv.NgayLam = nv.NgayLam;
@@ -105,7 +147,6 @@ namespace BusinessLayer
                 upd_nv.ID_TD = nv.ID_TD;
                 upd_nv.ID_DT = nv.ID_DT;
                 upd_nv.ID_TG = nv.ID_TG;
-                upd_nv.ID_CT = nv.ID_CT;
                 db.SaveChanges();
                 return nv;
             }
@@ -114,7 +155,7 @@ namespace BusinessLayer
                 throw new Exception("Lỗi : " + ex.Message);
             }
         }
-        public void Delete(int id)
+        public void Delete(string id)
         {
             try
             {
@@ -128,9 +169,9 @@ namespace BusinessLayer
             }
         }
 
-        public List<tb_NhanVien> getSinhNhat() 
+        public List<tb_NhanVien> getSinhNhat()
         {
-            return db.tb_NhanVien.Where(x => x.NgaySinh.Month==DateTime.Now.Month).ToList();
+            return db.tb_NhanVien.Where(x => x.NgaySinh.Month == DateTime.Now.Month).ToList();
         }
     }
 }

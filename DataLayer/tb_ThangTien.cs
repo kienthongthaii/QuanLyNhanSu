@@ -16,23 +16,22 @@ namespace DataLayer
     {
         public string SoQD { get; set; }
         public string SoHD { get; set; }
-        public Nullable<int> ID_NV { get; set; }
-        public Nullable<double> LuongThoaThuan_OLD { get; set; }
-        public Nullable<double> LuongThoaThuan_NEW { get; set; }
+        public string ID_NV { get; set; }
+        public double HeSoLuong_OLD { get; set; }
+        public double HeSoLuong_NEW { get; set; }
         public string GhiChu { get; set; }
-        public string LyDo { get; set; }
-        public Nullable<System.DateTime> NgayApDung { get; set; }
-        public Nullable<System.DateTime> NgayKy { get; set; }
-        public Nullable<int> Create_By { get; set; }
+        public string LiDo { get; set; }
+        public System.DateTime NgayApDung { get; set; }
+        public System.DateTime NgayKi { get; set; }
+        public string ID_CV_OLD { get; set; }
+        public string ID_CV_NEW { get; set; }
+        public string Create_By { get; set; }
         public Nullable<System.DateTime> Create_Time { get; set; }
-        public Nullable<int> Update_By { get; set; }
+        public string Update_By { get; set; }
         public Nullable<System.DateTime> Update_Time { get; set; }
-        public Nullable<int> Delete_By { get; set; }
+        public string Delete_By { get; set; }
         public Nullable<System.DateTime> Delete_Time { get; set; }
-        public Nullable<int> ID_CV_Old { get; set; }
-        public Nullable<int> ID_CV_New { get; set; }
     
-        public virtual tb_HopDong tb_HopDong { get; set; }
         public virtual tb_NhanVien tb_NhanVien { get; set; }
     }
 }

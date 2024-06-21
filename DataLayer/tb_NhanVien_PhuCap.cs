@@ -15,11 +15,17 @@ namespace DataLayer
     public partial class tb_NhanVien_PhuCap
     {
         public int ID { get; set; }
-        public int ID_NV { get; set; }
-        public int ID_PC { get; set; }
-        public System.DateTime Ngay { get; set; }
+        public string ID_NV { get; set; }
+        public string ID_PC { get; set; }
+        public string ID_NV_Duyet { get; set; }
+        public System.DateTime NgayKi { get; set; }
         public string NoiDung { get; set; }
-        public double SoTien { get; set; }
+        public string Create_By { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     
         public virtual tb_NhanVien tb_NhanVien { get; set; }
         public virtual tb_PhuCap tb_PhuCap { get; set; }

@@ -56,7 +56,7 @@ namespace QLNhanSu
             slkHopDong.Enabled = !check;
             dtNgayApDung.Enabled = !check;
             dtNgayKy.Enabled = !check;
-            txtLuongMoi.Enabled = !check;
+            txtHeSoLuongMoi.Enabled = !check;
             ckbThangChuc.Enabled = !check;
             
         }
@@ -87,23 +87,23 @@ namespace QLNhanSu
                 dcl.SoQD = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/QD"+noiDUng;
                 dcl.SoHD = slkHopDong.EditValue.ToString();
                 dcl.NgayApDung = dtNgayApDung.Value;
-                dcl.NgayKy = dtNgayKy.Value;
-                dcl.LyDo = txtLiDo.Text;
+                dcl.NgayKi = dtNgayKy.Value;
+                dcl.LiDo = txtLiDo.Text;
                 dcl.GhiChu = txtGhiChu.Text;
-                dcl.LuongThoaThuan_OLD = double.Parse(txtLuongCu.Text);
-                dcl.LuongThoaThuan_NEW = double.Parse(txtLuongMoi.Text);
+                dcl.HeSoLuong_OLD = double.Parse(txtHeSoLuongCu.Text);
+                dcl.HeSoLuong_NEW = double.Parse(txtHeSoLuongMoi.Text);
                 dcl.ID_NV = _hopDong.getItem(slkHopDong.EditValue.ToString()).ID_NV;
-                dcl.ID_CV_Old = _nhanVien.getItem((int)dcl.ID_NV).ID_CV;
+                dcl.ID_CV_OLD = _nhanVien.getItem(dcl.ID_NV).ID_CV;
                 if (ckbThangChuc.Checked)
                 {
-                    dcl.ID_CV_New = int.Parse(slkChucVu.EditValue.ToString());
+                    dcl.ID_CV_NEW = slkChucVu.EditValue.ToString();
                 }
                 else
                 {
-                    dcl.ID_CV_New = dcl.ID_CV_Old;
+                    dcl.ID_CV_NEW = dcl.ID_CV_OLD;
                 }
                
-                dcl.Create_By = 1;
+                dcl.Create_By = "1";
                 dcl.Create_Time = DateTime.Now;
                 _thangTien.Add(dcl);
             }
@@ -112,23 +112,26 @@ namespace QLNhanSu
                 dcl = _thangTien.getItem(_soQD);
                 dcl.SoHD = slkHopDong.EditValue.ToString();
                 dcl.NgayApDung = dtNgayApDung.Value;
-                dcl.NgayKy = dtNgayKy.Value;
-                dcl.LyDo = txtLiDo.Text;
+                dcl.NgayKi = dtNgayKy.Value;
+                dcl.LiDo = txtLiDo.Text;
                 dcl.GhiChu = txtGhiChu.Text;
                 dcl.ID_NV = _hopDong.getItem(slkHopDong.EditValue.ToString()).ID_NV;
-                dcl.ID_CV_New = int.Parse(slkChucVu.EditValue.ToString());
-                dcl.Update_By = 1;
+                dcl.ID_CV_NEW = slkChucVu.EditValue.ToString();
+                dcl.Update_By = "1";
                 dcl.Update_Time = DateTime.Now;
                 _thangTien.Update(dcl);
             }
             var hd = _hopDong.getItem(slkHopDong.EditValue.ToString());
-            hd.LuongThoaThuan = double.Parse(txtLuongMoi.Text);
+            hd.HeSoLuong = double.Parse(txtHeSoLuongMoi.Text);
             _hopDong.Update(hd);
-
-            var nv = _hopDong.getItemFull(slkHopDong.EditValue.ToString());
-            var nv_Upd = _nhanVien.getItem((int)nv[0].ID_NV);
-            nv_Upd.ID_CV = int.Parse(slkChucVu.EditValue.ToString());
-            _nhanVien.Update(nv_Upd);
+            if (ckbThangChuc.Checked)
+            {
+                var nv = _hopDong.getItemFull(slkHopDong.EditValue.ToString());
+                var nv_Upd = _nhanVien.getItem(nv[0].ID_NV);
+                nv_Upd.ID_CV = slkChucVu.EditValue.ToString();
+                _nhanVien.Update(nv_Upd);
+            }
+            
         }
 
         void _reset()
@@ -188,9 +191,9 @@ namespace QLNhanSu
             }
             if (MessageBox.Show("Bạn có xác nhận xóa không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _thangTien.Delete(_soQD, 1);
+                _thangTien.Delete(_soQD,"1");
                 var hd = _hopDong.getItem(slkHopDong.EditValue.ToString());
-                hd.LuongThoaThuan = double.Parse(txtLuongCu.Text);
+                hd.HeSoLuong = double.Parse(txtHeSoLuongCu.Text);
                 _hopDong.Update(hd);
                 LoadData();
             }
@@ -230,17 +233,17 @@ namespace QLNhanSu
                 _soQD = gvDanhSach.GetFocusedRowCellValue("SoQD").ToString();
                 var dcl = _thangTien.getItem(_soQD);
                 txtSoQD.Text = _soQD;
-                dtNgayApDung.Value = dcl.NgayApDung.Value;
-                dtNgayKy.Value = dcl.NgayKy.Value;
-                txtLuongCu.Text = dcl.LuongThoaThuan_OLD.ToString();
-                txtLuongMoi.Text = dcl.LuongThoaThuan_NEW.ToString();
+                dtNgayApDung.Value = dcl.NgayApDung;
+                dtNgayKy.Value = dcl.NgayKi;
+                txtHeSoLuongCu.Text = dcl.HeSoLuong_OLD.ToString();
+                txtHeSoLuongMoi.Text = dcl.HeSoLuong_NEW.ToString();
                 slkHopDong.EditValue = dcl.ID_NV;
                 txtGhiChu.Text = dcl.GhiChu;
-                txtLiDo.Text = dcl.LyDo;
+                txtLiDo.Text = dcl.LiDo;
                 slkHopDong.EditValue = dcl.SoHD;
                 txtInfor_NV.Text = gvDanhSach.GetFocusedRowCellValue("Ten").ToString();
                 txtChucVuCu.Text = gvDanhSach.GetFocusedRowCellValue("TenCV_Old").ToString();
-                slkChucVu.EditValue = dcl.ID_CV_New;
+                slkChucVu.EditValue = dcl.ID_CV_NEW;
                 showHide(true);
                 splitContainer1.Panel1Collapsed = false;
             }
@@ -262,7 +265,7 @@ namespace QLNhanSu
             if (hd.Count!=0)
             {
                 txtInfor_NV.Text = hd[0].ID_NV + " - " + hd[0].TenNV;
-                txtLuongCu.Text = hd[0].LuongThoaThuan.ToString();
+                txtHeSoLuongCu.Text = hd[0].HeSoLuong.ToString();
                 txtChucVuCu.Text = hd[0].TenCV.ToString();
             }
         }

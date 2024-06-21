@@ -82,22 +82,22 @@ namespace QLNhanSu
             if (_add)
             {
                 
-                var soQDMAX = _ktkl.soQuyetDinhMAX(x);
+                var soQDMAX = _ktkl.SoQDMAX(x);
                 int so = int.Parse(soQDMAX.Substring(0, 5)) + 1;
 
                 tb_KhenThuongKyLuat kt = new tb_KhenThuongKyLuat();
-                kt.SoQuyetDinh = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/QD"+tenLoai;
+                kt.SoQD = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/QD"+tenLoai;
                 kt.TuNgay = dtTuNgay.Value;
                 if (kethuc)
                 {
                     kt.DenNgay = dtDenNgay.Value;
                 }
-                kt.Ngay = dtNgay.Value;
-                kt.LyDo = txtLiDo.Text;
+                kt.NgayKi = dtNgay.Value;
+                kt.LiDo = txtLiDo.Text;
                 kt.NoiDung = txtNoiDung.Text;
-                kt.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
+                kt.ID_NV = slkNhanVien.EditValue.ToString();
                 kt.Create_Time = DateTime.Now;
-                kt.Create_By = 1;
+                kt.Create_By = "1";
                 kt.Loai = x;
                 _ktkl.Add(kt);
             }
@@ -109,12 +109,12 @@ namespace QLNhanSu
                 {
                     kt.DenNgay = dtDenNgay.Value;
                 }
-                kt.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
-                kt.Ngay = dtNgay.Value;
-                kt.LyDo = txtLiDo.Text;
+                kt.ID_NV = slkNhanVien.EditValue.ToString();
+                kt.NgayKi = dtNgay.Value;
+                kt.LiDo = txtLiDo.Text;
                 kt.NoiDung = txtNoiDung.Text;
                 kt.Create_Time = DateTime.Now;
-                kt.Create_By = 1;
+                kt.Create_By = "1";
                 _ktkl.Update(kt);
             }
         }
@@ -172,7 +172,7 @@ namespace QLNhanSu
             }
             if (MessageBox.Show("Bạn có xác nhận xóa không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _ktkl.Delete(_soQD,1);
+                _ktkl.Delete(_soQD,"1");
                 LoadDataKhenThuong();
                 LoadDataKyLuat();
             }
@@ -209,13 +209,13 @@ namespace QLNhanSu
             if (gvDanhSach.RowCount != 0)
             {
                 _click = true;
-                _soQD = gvDanhSach.GetFocusedRowCellValue("SoQuyetDinh").ToString();
+                _soQD = gvDanhSach.GetFocusedRowCellValue("SoQD").ToString();
                 var kt = _ktkl.getItem(_soQD);
                 txtSoQD.Text = _soQD;
                 dtTuNgay.Value = (DateTime)kt.TuNgay;
                 slkNhanVien.EditValue = kt.ID_NV;
-                dtNgay.Value = kt.Ngay.Value;
-                txtLiDo.Text = kt.LyDo;
+                dtNgay.Value = kt.NgayKi;
+                txtLiDo.Text = kt.LiDo;
                 txtNoiDung.Text = kt.NoiDung;
                 cbLoai.SelectedIndex = 1;
                 showHide(true);
@@ -228,14 +228,14 @@ namespace QLNhanSu
             if (gvDanhSachKiLuat.RowCount != 0)
             {
                 _click = true;
-                _soQD = gvDanhSachKiLuat.GetFocusedRowCellValue("SoQuyetDinh").ToString();
+                _soQD = gvDanhSachKiLuat.GetFocusedRowCellValue("SoQD").ToString();
                 var kt = _ktkl.getItem(_soQD);
                 txtSoQD.Text = _soQD;
                 dtTuNgay.Value =(DateTime)kt.TuNgay;
                 dtDenNgay.Value=(DateTime)kt.DenNgay;
                 slkNhanVien.EditValue = kt.ID_NV;
-                dtNgay.Value = kt.Ngay.Value;
-                txtLiDo.Text = kt.LyDo;
+                dtNgay.Value = kt.NgayKi;
+                txtLiDo.Text = kt.LiDo;
                 txtNoiDung.Text = kt.NoiDung;
                 cbLoai.SelectedIndex = 0;
                 showHide(true);

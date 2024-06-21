@@ -9,8 +9,8 @@ namespace BusinessLayer
 {
     public class TonGiao
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
-        public tb_TonGiao getItem(int id)
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
+        public tb_TonGiao getItem(string id)
         {
             return db.tb_TonGiao.FirstOrDefault(x => x.ID_TG == id);
 
@@ -47,7 +47,7 @@ namespace BusinessLayer
                 throw new Exception("Lỗi : " + ex.Message);
             }
         }
-        public void Delete(int id)
+        public void Delete(string id)
         {
             try
             {

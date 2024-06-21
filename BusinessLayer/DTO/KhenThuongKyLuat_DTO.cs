@@ -8,21 +8,22 @@ namespace BusinessLayer.DTO
 {
     public class KhenThuongKyLuat_DTO
     {
-        public string SoQuyetDinh { get; set; }
-        public string LyDo { get; set; }
+        public string SoQD { get; set; }
+        public string LiDo { get; set; }
         public string NoiDung { get; set; }
-        public Nullable<System.DateTime> Ngay { get; set; }
-        public Nullable<int> Loai { get; set; }
-        public Nullable<int> ID_NV { get; set; }
-        public string Ten {  get; set; }
-
-        public Nullable<System.DateTime> TuNgay { get; set; }
+        public System.DateTime NgayKi { get; set; }
+        public int Loai { get; set; }
+        public string ID_NV_Duyet { get; set; }
+        public string TenNV_Duyet { get; set; }
+        public string ID_NV { get; set; }
+        public string TenNV { get; set; }
+        public System.DateTime TuNgay { get; set; }
         public Nullable<System.DateTime> DenNgay { get; set; }
-        public Nullable<int> Create_By { get; set; }
+        public string Create_By { get; set; }
         public Nullable<System.DateTime> Create_Time { get; set; }
-        public Nullable<int> Update_By { get; set; }
+        public string Update_By { get; set; }
         public Nullable<System.DateTime> Update_Time { get; set; }
-        public Nullable<int> Delete_By { get; set; }
+        public string Delete_By { get; set; }
         public Nullable<System.DateTime> Delete_Time { get; set; }
     }
 }

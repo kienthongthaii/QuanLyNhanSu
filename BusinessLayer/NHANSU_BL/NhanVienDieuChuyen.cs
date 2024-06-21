@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public class NhanVienDieuChuyen
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
         public tb_DieuChuyen getItem(string id)
         {
             return db.tb_DieuChuyen.FirstOrDefault(x => x.SoQD == id);
@@ -30,19 +30,20 @@ namespace BusinessLayer
                 dc_DTO = new DieuChuyen_DTO();
                 dc_DTO.SoQD = item.SoQD;
                 dc_DTO.ID_NV = item.ID_NV;
-                dc_DTO.Ngay = item.Ngay;
+                dc_DTO.NgayKi = item.NgayKi;
+                dc_DTO.NgayApDung = item.NgayApDung;
                 dc_DTO.LiDo = item.LiDo;
                 dc_DTO.GhiChu = item.GhiChu;
                 var nv = db.tb_NhanVien.FirstOrDefault(x => x.ID_NV == item.ID_NV);
-                dc_DTO.Ten = nv.Ten;
+                dc_DTO.TenNV = nv.TenNV;
                 var pb = db.tb_PhongBan.FirstOrDefault(p => p.ID_PB == item.ID_PB);
                 dc_DTO.TenPB = pb.TenPB;
                 var pb_New = db.tb_PhongBan.FirstOrDefault(p2 => p2.ID_PB == item.ID_PBNew);
-                dc_DTO.TenPBNEW = pb_New.TenPB;
+                dc_DTO.TenPBNew = pb_New.TenPB;
                 var bp = db.tb_BoPhan.FirstOrDefault(p3 => p3.ID_BP == item.ID_BP);
                 dc_DTO.TenBP = bp.TenBP;
                 var bp_New = db.tb_BoPhan.FirstOrDefault(p4 => p4.ID_BP == item.ID_BPNew);
-                dc_DTO.TenBPNEW = bp_New.TenBP;
+                dc_DTO.TenBPNew = bp_New.TenBP;
 
                 dc_DTO.Create_By = item.Create_By;
                 dc_DTO.Create_Time = item.Create_Time;
@@ -74,7 +75,8 @@ namespace BusinessLayer
             try
             {
                 var upd_dc = db.tb_DieuChuyen.FirstOrDefault(x=>x.SoQD==dc.SoQD);
-                upd_dc.Ngay = dc.Ngay;
+                upd_dc.NgayKi = dc.NgayKi;
+                upd_dc.NgayApDung = dc.NgayApDung;
                 upd_dc.ID_PBNew = dc.ID_PBNew;
                 upd_dc.ID_BPNew = dc.ID_BPNew;
                 upd_dc.ID_NV = dc.ID_NV;

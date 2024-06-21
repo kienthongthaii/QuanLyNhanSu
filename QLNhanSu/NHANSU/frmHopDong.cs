@@ -41,7 +41,8 @@ namespace QLNhanSu
             dtNgayKetThuc.Enabled = !check;
             dtNgayKi.Enabled = !check;
             spLanKi.Enabled = !check;
-            txtLuongThoaThuan.Enabled = !check;
+            spHeSoLuong.Enabled = !check;
+            txtLuongCoBan.Enabled = !check;
             slkNhanVien.Enabled = !check;
             dtNgayKetThuc.Enabled= !check;
 
@@ -71,15 +72,15 @@ namespace QLNhanSu
                 hd.SoHD = so.ToString("00000") + @"/" + DateTime.Now.Year.ToString() + @"/HĐLV";
                 hd.NgayBatDau= dtNgayBatDau.Value;
                 hd.NgayKetThuc = dtNgayKetThuc.Value;
-                hd.NgayKy= dtNgayKetThuc.Value;
+                hd.NgayKi = dtNgayKetThuc.Value;
                 hd.ThoiHan = cboThoiHan.Text;
-                hd.LuongThoaThuan = double.Parse(txtLuongThoaThuan.EditValue.ToString());
-                hd.LanKy = int.Parse(txtLuongThoaThuan.EditValue.ToString());
-                hd.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
+                hd.LuongCoBan = decimal.Parse(txtLuongCoBan.EditValue.ToString());
+                hd.LanKi = int.Parse(spLanKi.EditValue.ToString());
+                hd.HeSoLuong = float.Parse(spHeSoLuong.EditValue.ToString());
+                hd.ID_NV = slkNhanVien.EditValue.ToString();
                 hd.NoiDung = txtNoiDung.RtfText;
-                hd.ID_CT = 1;
                 hd.Create_Time = DateTime.Now;
-                hd.Create_By = 1;
+                hd.Create_By = "1";
                 _hdld.Add(hd);
             }
             else
@@ -88,15 +89,15 @@ namespace QLNhanSu
                 
                 hd.NgayBatDau = dtNgayBatDau.Value;
                 hd.NgayKetThuc = dtNgayKetThuc.Value;
-                hd.NgayKy = dtNgayKetThuc.Value;
+                hd.NgayKi = dtNgayKetThuc.Value;
                 hd.ThoiHan = cboThoiHan.Text;
-                hd.LuongThoaThuan = double.Parse(txtLuongThoaThuan.EditValue.ToString());
-                hd.LanKy = int.Parse(txtLuongThoaThuan.EditValue.ToString());
-                hd.ID_NV = int.Parse(slkNhanVien.EditValue.ToString());
+                hd.LuongCoBan = decimal.Parse(txtLuongCoBan.EditValue.ToString());
+                hd.LanKi = int.Parse(spLanKi.EditValue.ToString());
+                hd.HeSoLuong = float.Parse(spHeSoLuong.EditValue.ToString());
+                hd.ID_NV = slkNhanVien.EditValue.ToString();
                 hd.NoiDung = txtNoiDung.RtfText;
-                hd.ID_CT = 1;
                 hd.Create_Time = DateTime.Now;
-                hd.Create_By = 1;
+                hd.Create_By = "1";
                 _hdld.Update(hd);
             }
         }
@@ -106,8 +107,9 @@ namespace QLNhanSu
             dtNgayBatDau.Value = DateTime.Now;
             dtNgayKetThuc.Value = dtNgayBatDau.Value.AddMonths(6);
             dtNgayKi.Value = DateTime.Now;
+            spHeSoLuong.Text = "1";
             spLanKi.Text = "1";
-            txtLuongThoaThuan.Text = "1";
+            txtLuongCoBan.Text = "0";
         }
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -154,7 +156,7 @@ namespace QLNhanSu
             }
             if (MessageBox.Show("Bạn có xác nhận xóa không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                _hdld.Delete(_soHD,1);
+                _hdld.Delete(_soHD,"1");
                 LoadData();
             }
         }
@@ -199,10 +201,11 @@ namespace QLNhanSu
                 txtSoHD.Text = _soHD;
                 dtNgayBatDau.Value = hd.NgayBatDau;
                 dtNgayKetThuc.Value = hd.NgayKetThuc;
-                dtNgayKi.Value = hd.NgayKy;
+                dtNgayKi.Value = hd.NgayKi;
                 cboThoiHan.Text = hd.ThoiHan;
-                txtLuongThoaThuan.EditValue = hd.LuongThoaThuan;
-                spLanKi.EditValue = hd.LanKy;
+                txtLuongCoBan.EditValue = hd.LuongCoBan;
+                spLanKi.EditValue = hd.LanKi;
+                spHeSoLuong.EditValue = hd.HeSoLuong;
                 slkNhanVien.EditValue = hd.ID_NV;
                 txtNoiDung.RtfText = hd.NoiDung;
                 _lstHD = _hdld.getItemFull(_soHD);

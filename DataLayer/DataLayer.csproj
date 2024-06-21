@@ -66,7 +66,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNS.edmx</DependentUpon>
     </Compile>
-    <Compile Include="tb_BangCong.cs">
+    <Compile Include="tb_BangCong_NV_CT.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_BangLuong.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_BaoHiem.cs">
@@ -81,9 +84,6 @@
     <Compile Include="tb_ChungChi.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_CongTy.cs">
-      <DependentUpon>QLNS.tt</DependentUpon>
-    </Compile>
     <Compile Include="tb_DanToc.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
@@ -96,10 +96,10 @@
     <Compile Include="tb_KhenThuongKyLuat.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_LoaiCa.cs">
+    <Compile Include="tb_KyCong.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
-    <Compile Include="tb_LoaiCong.cs">
+    <Compile Include="tb_KyCongChiTiet.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_NhanVien.cs">
@@ -112,6 +112,9 @@
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_PhuCap.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_SYS_User.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_TangCa.cs">
@@ -134,32 +137,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="QLNS.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLNS.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="QLNS.edmx.diagram">
       <DependentUpon>QLNS.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="QLNS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLNS.Context.cs</LastGenOutput>
       <DependentUpon>QLNS.edmx</DependentUpon>
+      <LastGenOutput>QLNS.Context.cs</LastGenOutput>
     </Content>
     <Content Include="QLNS.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QLNS.edmx</DependentUpon>
       <LastGenOutput>QLNS.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,7 @@
 ﻿using BusinessLayer;
 using QLNhanSu.CHAMCONG;
+using QLNhanSu.HETHONG;
+using QLNhanSu.LUONG;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,7 +79,7 @@ namespace QLNhanSu
 
         private void btnCongTy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            openForm(typeof(frmCongTy));
+            
         }
 
         private void btnBoPhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -149,12 +151,53 @@ namespace QLNhanSu
 
         private void btnLoaiCa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            openForm(typeof(frmLoaiCa));
         }
 
         private void btnLoaiCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            openForm(typeof(frmLoaiCong));
+        }
+
+        private void btnBangCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmKyCong));
+        }
+
+        private void btnBangCongChiTiet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+           frmBangCongCT frm = new frmBangCongCT();
+            frm.ShowDialog();
+        }
+
+        private void btnPhuCap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmPhuCap));
+        }
+
+        private void btnTangCa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmTangCa));
+        }
+
+        private void btnUngLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmUngLuong));
+        }
+
+        private void btnBangLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmBangLuong));
+        }
+
+        private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+            frmLogin frm = new frmLogin();
+            frm.ShowDialog();
+        }
+
+        private void btnTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmTaiKhoan));
         }
     }
 }

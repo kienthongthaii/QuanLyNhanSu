@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public class ThoiViec
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
+            QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
         public tb_ThoiViec getItem(string soQD)
         {
             return db.tb_ThoiViec.FirstOrDefault(x=>x.SoQD==soQD);
@@ -34,7 +34,7 @@ namespace BusinessLayer
                 tv_DTO.LyDo = item.LyDo;
                 tv_DTO.GhiChu = item.GhiChu;
                 var nv = db.tb_NhanVien.FirstOrDefault(x => x.ID_NV == item.ID_NV);
-                tv_DTO.Ten = nv.Ten;
+                tv_DTO.TenNV = nv.TenNV;
 
                 tv_DTO.Create_By = item.Create_By;
                 tv_DTO.Create_Time = item.Create_Time;

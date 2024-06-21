@@ -18,6 +18,7 @@ using DevExpress.XtraReports.Serialization;
 using System.Reflection;
 using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 using DevExpress.Utils.Extensions;
+using static QLNhanSu.Funcions;
 
 namespace QLNhanSu
 {
@@ -36,7 +37,7 @@ namespace QLNhanSu
         TrinhDo _trinhdo;
 
         bool _add;
-        int _id;
+        string _id;
         bool _click;
         bool flag = false;
 
@@ -80,11 +81,75 @@ namespace QLNhanSu
             cbTonGiao.ValueMember = "ID_TG";
 
         }
-        void loadBoPhan(int x)
+        void loadBoPhan(string x)
         {
             cbBoPhan.DataSource = _bophan.getlistWithPB(x);
             cbBoPhan.ValueMember = "ID_BP";
             cbBoPhan.DisplayMember = "TenBP";
+
+        }
+        bool checkInfor()
+        {
+            bool pass = true;
+            if (pass)
+            {
+                if (txtTenNV.Text==string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập tên nhân viên!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (txtCCCD.Text == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập CCCD!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (txtDienThoai.Text == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập số điện thoại!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (txtEmail.Text == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập Email!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (txtDiaChi.Text == string.Empty)
+                {
+                    MessageBox.Show("Vui lòng nhập địa chỉ!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (cbBoPhan.Items.Count < 1)
+                {
+                    MessageBox.Show("Vui lòng chọn phòng ban, sau đó chọn bộ phận!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (dtNgayLam.Value > DateTime.Now || dtNgaySinh.Value > DateTime.Now)
+                {
+                    MessageBox.Show("Thời gian không được lớn hơn ngày giờ hiện tại!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (dtNgaySinh.Value < DateTime.Now.AddYears(-18))
+                {
+                    MessageBox.Show("Nhân viên này chưa đủ tuổi!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (txtCCCD.Text.Length > 12)
+                {
+                    MessageBox.Show("Bạn phải nhập CCCD 12 số!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (txtDienThoai.Text.Length > 10)
+                {
+                    MessageBox.Show("Bạn phải nhập SĐT 10 số!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    pass = false;
+                }
+                if (pass)
+                {
+                    return true;
+                }
+               
+            }
+            return false;
 
         }
         //Ẩn hiện các nút
@@ -120,60 +185,63 @@ namespace QLNhanSu
             gvDanhSach.OptionsBehavior.Editable = false;
             _listNVDTO = _nhanvien.getlistFull();
         }
-        public bool BoPhanCoTruongBoPhan(int idBoPhan)
+        public bool BoPhanCoTruongBoPhan(string idBoPhan)
         {
             var boPhan = _bophan.getItem(idBoPhan);
-            return boPhan.ID_TruongBP.HasValue;
+            return !string.IsNullOrEmpty(boPhan.ID_TruongBP);
         }
         //Lưu dữ liệu thông qua Add hoặc Update
         void SaveData()
         {
-            tb_NhanVien nv;
-            if (_add)
-            {
-                nv = new tb_NhanVien();
-                nv.Ten = txtTenNV.Text;
-                nv.GioiTinh = chkGioiTinh.Checked;
-                nv.NgaySinh = dtNgaySinh.Value;
-                nv.NgayLam = dtNgayLam.Value;
-                nv.DienThoai = txtDienThoai.Text;
-                nv.Email = txtEmail.Text;
-                nv.DiaChi = txtDiaChi.Text;
-                nv.CCCD = txtCCCD.Text;
-                nv.Anh = ImageToBase64(pAnh.Image, pAnh.Image.RawFormat);
-                nv.ID_PB = int.Parse(cbPhongBan.SelectedValue.ToString());
-                nv.ID_CV = int.Parse(cbChucVu.SelectedValue.ToString());
-                nv.ID_BP = int.Parse(cbBoPhan.SelectedValue.ToString());
-                nv.ID_DT = int.Parse(cbDanToc.SelectedValue.ToString());
-                nv.ID_TD = int.Parse(cbTrinhDo.SelectedValue.ToString());
-                nv.ID_TG = int.Parse(cbTonGiao.SelectedValue.ToString());
-                nv.ID_CT = 1;
-                _nhanvien.Add(nv);
-            }
-            else
-            {
+            //if (checkInfor())
+            //{
+                tb_NhanVien nv;
+                if (_add)
+                {
+                    nv = new tb_NhanVien();
+                    AutoCodeGenerator generator = new AutoCodeGenerator();
+                    string newCode = generator.CreateAutoCode("NV", "tb_NhanVien", "ID_NV");
+                    nv.ID_NV = newCode;
+                    nv.TenNV = txtTenNV.Text;
+                    nv.GioiTinh = chkGioiTinh.Checked;
+                    nv.NgaySinh = dtNgaySinh.Value;
+                    nv.NgayLam = dtNgayLam.Value;
+                    nv.DienThoai = txtDienThoai.Text;
+                    nv.Email = txtEmail.Text;
+                    nv.DiaChi = txtDiaChi.Text;
+                    nv.CCCD = txtCCCD.Text;
+                    nv.Anh = ImageToBase64(pAnh.Image, pAnh.Image.RawFormat);
+                    nv.ID_PB = cbPhongBan.SelectedValue.ToString();
+                    nv.ID_CV = cbChucVu.SelectedValue.ToString();
+                    nv.ID_BP = cbBoPhan.SelectedValue.ToString();
+                    nv.ID_DT = cbDanToc.SelectedValue.ToString();
+                    nv.ID_TD = cbTrinhDo.SelectedValue.ToString();
+                    nv.ID_TG = cbTonGiao.SelectedValue.ToString();
+                    _nhanvien.Add(nv);
+                }
+                else
+                {
 
-                nv = _nhanvien.getItem(_id);
-                nv.Ten = txtTenNV.Text;
-                nv.GioiTinh = chkGioiTinh.Checked;
-                nv.NgaySinh = dtNgaySinh.Value;
-                nv.NgayLam = dtNgayLam.Value;
-                nv.Email = txtEmail.Text;
-                nv.DienThoai = txtDienThoai.Text;
-                nv.DiaChi = txtDiaChi.Text;
-                nv.CCCD = txtCCCD.Text;
-                nv.Anh = ImageToBase64(pAnh.Image, pAnh.Image.RawFormat);
-                nv.ID_PB = int.Parse(cbPhongBan.SelectedValue.ToString());
-                nv.ID_CV = int.Parse(cbChucVu.SelectedValue.ToString());
-                nv.ID_BP = int.Parse(cbBoPhan.SelectedValue.ToString());
-                nv.ID_DT = int.Parse(cbDanToc.SelectedValue.ToString());
-                nv.ID_TD = int.Parse(cbTrinhDo.SelectedValue.ToString());
-                nv.ID_TG = int.Parse(cbTonGiao.SelectedValue.ToString());
-                nv.ID_CT = 1;
+                    nv = _nhanvien.getItem(_id);
+                    nv.TenNV = txtTenNV.Text;
+                    nv.GioiTinh = chkGioiTinh.Checked;
+                    nv.NgaySinh = dtNgaySinh.Value;
+                    nv.NgayLam = dtNgayLam.Value;
+                    nv.Email = txtEmail.Text;
+                    nv.DienThoai = txtDienThoai.Text;
+                    nv.DiaChi = txtDiaChi.Text;
+                    nv.CCCD = txtCCCD.Text;
+                    nv.Anh = ImageToBase64(pAnh.Image, pAnh.Image.RawFormat);
+                    nv.ID_PB = cbPhongBan.SelectedValue.ToString();
+                    nv.ID_CV = cbChucVu.SelectedValue.ToString();
+                    nv.ID_BP = cbBoPhan.SelectedValue.ToString();
+                    nv.ID_DT = cbDanToc.SelectedValue.ToString();
+                    nv.ID_TD = cbTrinhDo.SelectedValue.ToString();
+                    nv.ID_TG = cbTonGiao.SelectedValue.ToString();
 
-                _nhanvien.Update(nv);
-            }
-            
+                    _nhanvien.Update(nv);
+                }
+            //}
         }
         //Chuyển đổi hình ảnh thành x64 lưu vào database
         public byte[] ImageToBase64(Image img, System.Drawing.Imaging.ImageFormat format)
@@ -188,6 +256,7 @@ namespace QLNhanSu
         //Chuyển từ x64 sang Image
         public Image Base64ToImage(byte[] data)
         {
+            
             MemoryStream ms = new MemoryStream(data, 0, data.Length);
             ms.Write(data, 0, data.Length);
             Image img = Image.FromStream(ms,true);
@@ -212,7 +281,6 @@ namespace QLNhanSu
             _add = true;
             _reset();
             splitContainer1.Panel1Collapsed = false;
-            
         }
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -246,19 +314,10 @@ namespace QLNhanSu
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (txtTenNV.Text == string.Empty)
-            {
-                showHide(true);
-                MessageBox.Show("Vui lòng không để trống ô nhập!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
                 SaveData();
                 LoadData();
                 showHide(true);
                 _add = false;
-    
-            }
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -284,9 +343,9 @@ namespace QLNhanSu
             if (gvDanhSach.RowCount > 0)
             {
                 _click = true;
-                _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("ID_NV").ToString());
+                _id = gvDanhSach.GetFocusedRowCellValue("ID_NV").ToString();
                 var nv = _nhanvien.getItem(_id);
-                txtTenNV.Text = nv.Ten;
+                txtTenNV.Text = nv.TenNV;
                 chkGioiTinh.Checked = nv.GioiTinh;
                 dtNgaySinh.Value = nv.NgaySinh;
                 dtNgayLam.Value = nv.NgayLam;
@@ -294,7 +353,7 @@ namespace QLNhanSu
                 txtDiaChi.Text = nv.DiaChi;
                 txtEmail.Text = nv.Email;
                 txtCCCD.Text = nv.CCCD;
-                pAnh.Image = Base64ToImage(nv.Anh);
+                //pAnh.Image = Base64ToImage(nv.Anh);
                 cbPhongBan.SelectedValue = nv.ID_PB;
                 cbChucVu.SelectedValue = nv.ID_CV;
                 cbBoPhan.SelectedValue = nv.ID_BP;
@@ -329,7 +388,7 @@ namespace QLNhanSu
         {
             if (flag)
             {
-                loadBoPhan(int.Parse(cbPhongBan.SelectedValue.ToString()));
+                loadBoPhan(cbPhongBan.SelectedValue.ToString());
             }
         }
     }

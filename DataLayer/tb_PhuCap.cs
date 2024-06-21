@@ -20,9 +20,15 @@ namespace DataLayer
             this.tb_NhanVien_PhuCap = new HashSet<tb_NhanVien_PhuCap>();
         }
     
-        public int ID_PC { get; set; }
+        public string ID_PC { get; set; }
         public string TenPC { get; set; }
-        public double SoTien { get; set; }
+        public decimal SoTien { get; set; }
+        public string Create_By { get; set; }
+        public Nullable<System.DateTime> Create_Time { get; set; }
+        public string Update_By { get; set; }
+        public Nullable<System.DateTime> Update_Time { get; set; }
+        public string Delete_By { get; set; }
+        public Nullable<System.DateTime> Delete_Time { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_NhanVien_PhuCap> tb_NhanVien_PhuCap { get; set; }

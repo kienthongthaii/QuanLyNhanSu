@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public class ThangTien
     {
-        QLNS_CELLPHONES_Entities db = new QLNS_CELLPHONES_Entities();
+        QuanLyNhanSu_MasterEntities db = new QuanLyNhanSu_MasterEntities();
         public tb_ThangTien getItem(string soQD)
         {
             return db.tb_ThangTien.FirstOrDefault(x => x.SoQD == soQD);
@@ -31,17 +31,17 @@ namespace BusinessLayer
                 dcl_DTO.SoHD = item.SoHD;
                 dcl_DTO.ID_NV = item.ID_NV;
                 dcl_DTO.NgayApDung = item.NgayApDung;
-                dcl_DTO.NgayKy = item.NgayKy;
-                dcl_DTO.LyDo = item.LyDo;
+                dcl_DTO.NgayKi = item.NgayKi;
+                dcl_DTO.LiDo = item.LiDo;
                 dcl_DTO.GhiChu = item.GhiChu;
-                dcl_DTO.LuongThoaThuan_OLD = item.LuongThoaThuan_OLD;
-                dcl_DTO.LuongThoaThuan_NEW = item.LuongThoaThuan_NEW;
+                dcl_DTO.HeSoLuong_OLD = item.HeSoLuong_OLD;
+                dcl_DTO.HeSoLuong_NEW = item.HeSoLuong_NEW;
                 var nv = db.tb_NhanVien.FirstOrDefault(x => x.ID_NV == item.ID_NV);
-                dcl_DTO.Ten = nv.Ten;
-                var cv_c = db.tb_ChucVu.FirstOrDefault(x1 => x1.ID_CV == item.ID_CV_Old);
-                dcl_DTO.TenCV_Old = cv_c.TenCV;
-                var cv_m = db.tb_ChucVu.FirstOrDefault(x2 => x2.ID_CV == item.ID_CV_New);
-                dcl_DTO.TenCV_New = cv_m.TenCV;
+                dcl_DTO.TenNV = nv.TenNV;
+                var cv_c = db.tb_ChucVu.FirstOrDefault(x1 => x1.ID_CV == item.ID_CV_OLD);
+                dcl_DTO.TenCV_OLD = cv_c.TenCV;
+                var cv_m = db.tb_ChucVu.FirstOrDefault(x2 => x2.ID_CV == item.ID_CV_NEW);
+                dcl_DTO.TenCV_NEW = cv_m.TenCV;
 
                 dcl_DTO.Create_By = item.Create_By;
                 dcl_DTO.Create_Time = item.Create_Time;
@@ -75,12 +75,12 @@ namespace BusinessLayer
                 var upd_dcl = db.tb_ThangTien.FirstOrDefault(x => x.SoQD == dcl.SoQD);
                 upd_dcl.SoHD = dcl.SoHD;
                 upd_dcl.NgayApDung = dcl.NgayApDung;
-                upd_dcl.NgayKy = dcl.NgayKy;
-                upd_dcl.LyDo = dcl.LyDo;
+                upd_dcl.NgayKi = dcl.NgayKi;
+                upd_dcl.LiDo = dcl.LiDo;
                 upd_dcl.ID_NV = dcl.ID_NV;
                 upd_dcl.GhiChu = dcl.GhiChu;
-                upd_dcl.LuongThoaThuan_NEW = dcl.LuongThoaThuan_NEW;
-                upd_dcl.ID_CV_New = dcl.ID_CV_New;
+                upd_dcl.HeSoLuong_NEW = dcl.HeSoLuong_NEW;
+                upd_dcl.ID_CV_NEW = dcl.ID_CV_NEW;
                 upd_dcl.Update_By = dcl.Update_By;
                 upd_dcl.Update_Time = dcl.Update_Time;
                 db.SaveChanges();
@@ -93,7 +93,7 @@ namespace BusinessLayer
             }
         }
 
-        public void Delete(string soQD, int id_user)
+        public void Delete(string soQD, string id_user)
         {
             try
             {
